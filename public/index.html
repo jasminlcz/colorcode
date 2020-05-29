@@ -12,6 +12,7 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="/style.css" />
+    <link rel="stylesheet" href="/abstaende.css" />
     <script
       src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
       integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
@@ -72,19 +73,23 @@
     </header>
 
     <main >
-      <div class="container">
+      <div class="container card">
       <div class="start">
-        <h2 class="mt-xl mb-md">Wie ist dein Spielername?</h2>
+        <h4 class="mt-xl mb-md">Hey! Vielen Dank, dass du uns bei unserem Projekt unterstützt. <br/><br/>
+Wähle zuerst einen Namen</h4>
         <div class="row">
           <div class="col-md-12 pb-md">
-          <form>
-            <input
+          <input id="name" type="text" size="30" class="form-control" placeholder="Spielername" aria-label="Spielername" aria-describedby="basic-addon2">
+            <!--<input
               id="name"
               type="text"
               maxlength="50"
               placeholder="Spielername"
             />
+            /> -->
           </div>
+          </div>
+          
             <!-- <input
           id="answer"
           type="text"
@@ -92,11 +97,13 @@
           placeholder="Your Answer"
         /> -->
             <!-- <input id="color" type="color" /> -->
+        <div class="row">
             <div class="col-md-12">
               <button type="button " class="btn btn-primary">Start</button>
             <!-- <button type="submit">Start</button> -->
           </div>
-          </form>
+             </div>
+          
         </div>
       </div>
     </div>
@@ -151,3 +158,4 @@
     <script src="/client.js"></script>
   </body>
 </html>
+
