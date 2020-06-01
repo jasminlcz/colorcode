@@ -39,6 +39,8 @@ app.post("/surveys", function (request, response) {
   response.sendStatus(200);
 });
 
+app.get("/colordata");
+
 // clear surveys
 app.get("/clear", function (request, response) {
   db.get("surveys").remove().write();

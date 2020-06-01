@@ -32,3 +32,28 @@ $(function () {
     });
   }
 });
+
+function gofromtoslide(actSlide, nextslide) {
+  var x = document.getElementById(nextslide);
+  if (x.style.display == "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+
+  var y = document.getElementById(actSlide);
+  if (y.style.display == "block") {
+    y.style.display = "none";
+  } else {
+    y.style.display = "block";
+  }
+}
+
+//slider
+var slider = document.getElementById("myRange");
+var output = document.getElementById("demo");
+output.innerHTML = slider.value;
+
+slider.oninput = function () {
+  output.innerHTML = this.value;
+};
