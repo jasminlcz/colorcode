@@ -31,6 +31,7 @@ app.post("/surveys", function (request, response) {
   db.get("surveys")
     .push({
       name: request.query.name,
+      modern_klassisch: request.query.modern_klassisch,
       answer: request.query.answer,
       color: request.query.color,
     })
