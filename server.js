@@ -32,6 +32,7 @@ app.post("/surveys", function (request, response) {
     .push({
       name: request.query.name,
       modern_klassisch: request.query.modern_klassisch,
+      unterhaltsam_serioes: request.query.unterhaltsam_serioes,
       answer: request.query.answer,
       color: request.query.color,
     })

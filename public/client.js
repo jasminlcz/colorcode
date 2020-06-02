@@ -5,6 +5,7 @@ $(function () {
     event.preventDefault();
     var name = $("input#name").val();
     var modern_klassisch = $("input#modern_klassisch").val();
+    var unterhaltsam_serioes = $("input#unterhaltsam_serioes").val();
     var answer = $("input#answer").val();
     var color = $("input#color").val();
     $.post(
@@ -12,6 +13,7 @@ $(function () {
         $.param({
           name: name,
           modern_klassisch: modern_klassisch,
+          unterhaltsam_serioes: unterhaltsam_serioes,
           answer: answer,
           color: color,
         }),
@@ -21,6 +23,7 @@ $(function () {
           .appendTo("ul#users");
         $("input#name").val("");
         $("input#modern_klassisch").val("");
+        $("input#unterhaltsam_serioes").val("");
         $("input#answer").val("");
         $("input#color").val("");
         $("input").focus();
@@ -38,6 +41,8 @@ $(function () {
             survey.name +
               " " +
               survey.modern_klassisch +
+              " " +
+              survey.unterhaltsam_serioes +
               " " +
               survey.answer +
               " " +
@@ -68,8 +73,6 @@ function gofromtoslide(actSlide, nextslide) {
 //slider
 var slider = document.getElementById("modern_klassisch");
 var output = document.getElementById("demo");
-
-
 
 output.innerHTML = slider.value;
 
