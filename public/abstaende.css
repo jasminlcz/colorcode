@@ -74,7 +74,7 @@
 }
 
 .mb-md {
-  margin-bottom: 30px !important;
+  margin-bottom: 20px !important;
 }
 
 .mb-lg {
@@ -317,7 +317,7 @@
     width: 8.33333%;
   }
   .col-md-2 {
-    width: 16.66667%;
+    width: 25%;
   }
   .col-md-3 {
     width: 25%;
@@ -388,4 +388,8 @@
   .col-lg-12 {
     width: 100%;
   }
+}
+
+#rechteck {
+  margin: 20 0 20 0;
 }

@@ -68,6 +68,9 @@ function gofromtoslide(actSlide, nextslide) {
 //slider
 var slider = document.getElementById("modern_klassisch");
 var output = document.getElementById("demo");
+
+
+
 output.innerHTML = slider.value;
 
 slider.oninput = function () {
