@@ -35,12 +35,20 @@ h4 {
 }
 
 .start {
-  margin: 0;
-  position: absolute;
+  margin: auto;
+  position: fixed;
   top: 50%;
   left: 50%;
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
+
+  /* position: absolute;
+
+  left: 0;
+  right: 0;
+  margin: auto;
+  top: 0;
+  bottom: 0; */
 
   /* position: fixed;
   top: 50%;
