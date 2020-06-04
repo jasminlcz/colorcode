@@ -11,7 +11,7 @@ h4 {
   font-size: larger;
 }
 .navbar {
-  height: 100px;
+  height: 80px;
   background-color: rgb(46, 235, 216);
 }
 .navbar a {
@@ -22,7 +22,7 @@ h4 {
   border-radius: 2px;
   display: inline-block;
   padding: 30px 30px 30px 30px;
-  height: 800px;
+  height: 700px;
   margin: 1rem;
   display: flex;
   position: relative;
@@ -75,4 +75,17 @@ h4 {
   border-radius: 50%;
   background: #acacac;
   cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+  .card {
+    background: rgb(255, 255, 255);
+    border-radius: 2px;
+    display: inline-block;
+    padding: 30px 30px 30px 30px;
+    height: 400px;
+
+    width: 500px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+  }
 }
