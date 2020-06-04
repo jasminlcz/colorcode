@@ -10,7 +10,13 @@ h4 {
   font-weight: 300;
   font-size: larger;
 }
-
+.navbar {
+  height: 100px;
+  background-color: rgb(46, 235, 216);
+}
+.navbar a {
+  color: white;
+}
 .card {
   background: rgb(255, 255, 255);
   border-radius: 2px;
