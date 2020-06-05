@@ -1,6 +1,8 @@
 body {
   font-family: helvetica, arial, sans-serif;
   text-align: center;
+  /* background-image: url(./back.png); */
+  background-color: rgb(148, 223, 203);
 }
 input {
   color: none;
@@ -10,9 +12,14 @@ h4 {
   font-weight: 300;
   font-size: larger;
 }
+.text {
+  height: 200px;
+  background-color: tomato;
+}
+
 .navbar {
   height: 80px;
-  background-color: rgb(46, 235, 216);
+  background-color: rgb(255, 255, 255);
 }
 .navbar a {
   color: white;

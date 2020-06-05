@@ -18,7 +18,7 @@ const adapter = new FileSync(".data/db.json");
 const db = low(adapter);
 
 // set default data
-db.defaults({ surveys: [] }).write();
+db.defaults({ surveys: [], users: [] }).write();
 
 // get all surveys
 app.get("/surveys", function (request, response) {
@@ -41,8 +41,6 @@ app.post("/surveys", function (request, response) {
   console.log("New survey inserted");
   response.sendStatus(200);
 });
-
-app.get("/colordata");
 
 // clear surveys
 app.get("/clear", function (request, response) {
