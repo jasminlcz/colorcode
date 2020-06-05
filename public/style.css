@@ -89,3 +89,16 @@ h4 {
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
   }
 }
+
+@media screen and (min-width: 2000px) {
+  .card {
+    height: 1000px;
+    padding: 60px 60px 60px 60px;
+    width: 1400px;
+  }
+  h4 {
+    line-height: 1.2;
+    font-weight: 300;
+    font-size: 25px;
+  }
+}
