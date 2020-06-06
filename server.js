@@ -16,9 +16,12 @@ const low = require('lowdb');
 const FileSync = require('lowdb/adapters/FileSync');
 const adapter = new FileSync('.data/db.json');
 const db = low(adapter);
+const colordb = low(new FileSync('.data/colordb.json'));
 
 // set default data
 db.defaults({ surveys: [], users: [] }).write();
+
+//API'S
 
 /**
  * Add User
@@ -47,23 +50,36 @@ app.get('/searchuser', function (request, response) {
 
 /**
  * Random Farbe generieren
- * @param uuid
+ * @query uuid
  *
  * 1. random farbe aus datenset
  * 2. prüfen ob Spieler bereits farbe gespielt
  * (3.) wenn bereits gespielt bei 1. neu beginnen
  */
-
-app.get('/randomcolor/:uuid', function (request, response) {
-  const uuid = request.params.uuid;
+app.get('/randomcolor', function (request, response) {
+  const usersuuid = request.query.uuid;
+  const playedColors = db.get('users').find({ uuid: usersuuid }).value();
+  var isNewColor = false;
+  while (!isNewColor) {
+    var randColor = colordb.get('colors').sample().value();
+    if (playedColors !== undefined) {
+      if (!playedColors.doneColors.includes(randColor.hex)) {
+        isNewColor = true;
+      }
+    } else {
+      isNewColor = true;
+    }
+  }
+  response.send(randColor);
 });
 
-// get all surveys
-app.get('/surveys', function (request, response) {
-  response.json(db.get('surveys'));
-});
-
-// creates a new entry in the surveys collection with the submitted values
+/**
+ * creates a new entry in the surveys collection with the submitted values
+ * @query survey results
+ *
+ * 1. result in surveys db
+ * 2. for user insert color in doneColors
+ */
 app.post('/surveys', function (request, response) {
   console.log(request.query);
   db.get('surveys')
@@ -80,9 +96,22 @@ app.post('/surveys', function (request, response) {
   response.sendStatus(200);
 });
 
-app.get('/colordata');
+/**
+ * get rangliste
+ */
+app.get('/ranking', function (request, response) {});
 
-// clear surveys
+// get all surveys - for testing
+app.get('/surveys', function (request, response) {
+  response.json(db.get('surveys'));
+});
+
+//get all colors - for testing
+app.get('/colors', function (request, response) {
+  response.json(colordb.get('colors'));
+});
+
+// clear surveys - for testing
 app.get('/clear', function (request, response) {
   db.get('surveys').remove().write();
   response.send('Database cleared');

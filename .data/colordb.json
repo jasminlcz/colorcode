@@ -1,0 +1,32 @@
+{
+  "colors": [
+    {
+      "name": "egret",
+      "hex": "#f3ece0"
+    },
+    {
+      "name": "snow-white",
+      "hex": "#f2f0eb"
+    },
+    {
+      "name": "bright-white",
+      "hex": "#f4f5f0"
+    },
+    {
+      "name": "cloud-dancer",
+      "hex": "#f0eee9"
+    },
+    {
+      "name": "gardenia",
+      "hex": "#f1e8df"
+    },
+    {
+      "name": "marshmallow",
+      "hex": "#f0eee4"
+    },
+    {
+      "name": "blanc-de-blanc",
+      "hex": "#e7e9e7"
+    }
+  ]
+}

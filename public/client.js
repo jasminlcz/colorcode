@@ -1,6 +1,6 @@
 $(function () {
   loadSurveys();
-  searchuser('e0862925-405a-4dce-b2a8-a3515df1a88f');
+  /* searchuser('e0862925-405a-4dce-b2a8-a3515df1a88f'); */
 
   $('form').submit(function (event) {
     event.preventDefault();
