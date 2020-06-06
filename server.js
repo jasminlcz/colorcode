@@ -84,14 +84,13 @@ app.post('/surveys', function (request, response) {
   console.log(request.query);
   db.get('surveys')
     .push({
-      name: request.query.name,
       uuid: request.query.uuid,
       modern_klassisch: request.query.modern_klassisch,
       unterhaltsam_serioes: request.query.unterhaltsam_serioes,
-      answer: request.query.answer,
       color: request.query.color,
     })
     .write();
+  db.get('users').find({uuid: request.query.uuid}).get('doneColors').push(request.query.color).write();
   console.log('New survey inserted');
   response.sendStatus(200);
 });
