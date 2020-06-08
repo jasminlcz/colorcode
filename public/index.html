@@ -33,6 +33,9 @@
       integrity="sha256-KzZiKy0DWYsnwMF+X1DvQngQ2/FxF7MF3Ff72XcpuPs="
       crossorigin="anonymous"
     ></script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    
   </head>
   <body>
     <header>
@@ -76,36 +79,45 @@
               Hey! Vielen Dank, dass du uns bei unserem Projekt unterstützt.
               Wähle zuerst einen Namen und eine Farbe.
             </h4>
+            <form id="userinformation">
             <div class="row">
               <div class="col-md-12 pb-md">
                 <input
                   id="name"
                   type="text"
                   size="30"
-                  class="form-control"
+                  class="form-control softui"
                   placeholder="Spielername"
                   aria-label="Spielername"
                   aria-describedby="basic-addon2"
+                  required
                 />
               </div>
               <div class="col-md-12 pb-md">
                 <input id="faveColor" type="color" />
+               
               </div>
+              <!-- <div id="app" class="col-md-12 pb-md ">
+                <color-picker v-bind="color" @input="onInput"></color-picker>
+               
+              </div> -->
+              
             </div>
 
             <div class="row pb-md">
               <div class="col-md-12">
-                <form id="userinformation">
+               
                   <button
                     type="button submit "
                     class="btn btn-wide btn-normal"
-                    onclick="location.href='newuser.html';"
+                    
                   >
                     Neues Spiel starten
                   </button>
-                </form>
+                
               </div>
             </div>
+          </form>
             <hr>
             <div class="row">
               <div class="col-md-12 pb-md">
@@ -147,6 +159,8 @@
       integrity="sha256-gvQgAFzTH6trSrAWoH1iPo9Xc96QxSZ3feW6kem+O00="
       crossorigin="anonymous"
     ></script>
-    <script src="/client.js"></script>
+    <script src="/colorpicker.js"></script>
+    <script src="/index.js"></script>
+    
   </body>
 </html>

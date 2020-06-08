@@ -5,13 +5,36 @@ body {
   background-image: url("./background.png");
   background-size: cover;
 }
-
+#colorrect {
+  border: 12px solid #eeeeee;
+  box-shadow: -3px -3px 7px #fcfcfc, 3px 3px 7px #bbc3cc;
+  border-radius: 51.5px;
+}
+input.softui {
+  background: #f0f0f0;
+  border-radius: 43px;
+  border: none;
+  padding-left: 30px;
+  height: 53px;
+  box-shadow: inset -5px -5px 8px #ffffff, inset 4px 4px 20px #cfcfcf;
+}
 .btn-wide {
-  width: 300px;
   height: 60px;
+  padding-left: 30px;
+  padding-right: 30px;
   margin: 10px;
   border-radius: 50px;
   font-size: 18px;
+  font-weight: 500;
+  color: #708090;
+  transition: ease-in;
+}
+.btn-small {
+  padding-left: 20px;
+  padding-right: 20px;
+  height: 50px;
+  border-radius: 50px;
+  font-size: 15px;
   font-weight: 500;
   color: #708090;
   transition: ease-in;
