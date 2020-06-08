@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>simple-survey-server</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="/style.css" />
+    <link rel="stylesheet" href="/abstaende.css" />
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js"
+      integrity="sha256-KzZiKy0DWYsnwMF+X1DvQngQ2/FxF7MF3Ff72XcpuPs="
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-light">
+        <a class="navbar-brand" href="index.html"> Farbenspiel</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="index.html"
+                >Das Spiel<span class="sr-only">(current)</span></a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="rangliste.html">Rangliste</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">Über</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <div id="slide3" style="display: block;">
+        <div class="container centered">
+          <div class="start">
+            <h4 class="mb-md">
+              Level 1 <br />
+              Wie wirkt diese Farbe auf dich? Ziehe den Kreis an die für dich
+              passende Stelle auf der Skala
+            </h4>
+
+            <div class="row">
+              <div class="col-md-12 colorRect">
+                <div
+                  class="mb-md"
+                  id="colorrect"
+                  style="
+                    height: 100px;
+                    width: 300px;
+                    background-color: #00ffd0;
+                  "
+                ></div>
+              </div>
+            </div>
+
+            <!-- Range Slider 1 -->
+
+            <div class="row">
+              <div class="col-md-2">
+                <label for="">modern</label>
+              </div>
+              <div class="col-md-8">
+                <div class="slidecontainer pb-md">
+                  <input
+                    type="range"
+                    min="0"
+                    max="100"
+                    value="50"
+                    class="slider"
+                    id="modern_klassisch"
+                  />
+
+                  <!-- <p>Value: <span id="demo"></span></p> -->
+                </div>
+              </div>
+              <div class="col-md-2">zeitlos</div>
+            </div>
+
+            <!-- Range Slider 2 -->
+
+            <div class="row">
+              <div class="col-md-2">
+                <label for="">einzigartig</label>
+              </div>
+              <div class="col-md-8">
+                <div class="slidecontainer pb-md">
+                  <input
+                    type="range"
+                    min="0"
+                    max="100"
+                    value="50"
+                    class="slider"
+                    id="unterhaltsam_serioes"
+                  />
+                </div>
+              </div>
+              <div class="col-md-2">alltäglich</div>
+            </div>
+
+            <!-- Range Slider 3 -->
+
+            <div class="row">
+              <div class="col-md-2">
+                <label for="">kalt</label>
+              </div>
+              <div class="col-md-8">
+                <div class="slidecontainer pb-md">
+                  <input
+                    type="range"
+                    min="0"
+                    max="100"
+                    value="50"
+                    class="slider"
+                    id="myRange"
+                  />
+                </div>
+              </div>
+              <div class="col-md-2">warm</div>
+            </div>
+
+            <!-- Range Slider 4 -->
+
+            <div class="row">
+              <div class="col-md-2">
+                <label for="">unterhaltsam</label>
+              </div>
+              <div class="col-md-8">
+                <div class="slidecontainer pb-md">
+                  <input
+                    type="range"
+                    min="0"
+                    max="100"
+                    value="50"
+                    class="slider"
+                    id="myRange"
+                  />
+                </div>
+              </div>
+              <div class="col-md-2">seriös</div>
+            </div>
+
+            <!-- Range Slider 5 -->
+
+            <div class="row">
+              <div class="col-md-2">
+                <label for="">freundlich</label>
+              </div>
+              <div class="col-md-8">
+                <div class="slidecontainer pb-md">
+                  <input
+                    type="range"
+                    min="0"
+                    max="100"
+                    value="50"
+                    class="slider"
+                    id="myRange"
+                  />
+                </div>
+              </div>
+              <div class="col-md-2">formal</div>
+            </div>
+
+            <div class="row">
+              <div class="col-md-12">
+                <button
+                  type="button "
+                  class="btn btn-primary"
+                  onclick="gofromtoslide('slide3', 'slide2')"
+                >
+                  Zurück
+                </button>
+                <button
+                  type="button "
+                  class="btn btn-primary"
+                  onclick="gofromtoslide('slide3', 'slide4')"
+                >
+                  Weiter
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="slide4" style="display: none;">
+        <div class="container centered">
+          <div class="start">
+            <h4 class="mb-md">
+              Vielen Dank fürs teilnehmen. Schicke jetzt deine Umfrage ab.
+            </h4>
+
+            <div class="row">
+              <div class="col-md-12">
+                <form id="survey">
+                  <button
+                    type="button "
+                    class="btn btn-primary"
+                    onclick="gofromtoslide('slide4', 'slide3')"
+                  >
+                    Zurück
+                  </button>
+                  <button type="button submit" class="btn btn-primary">
+                    Submit
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- <div class="row">
+        <div class="col-md-12">
+          <div class="surveys">
+            <p class="mt-md">Surveys:</p>
+            <ul id="surveys"></ul>
+            <p><a href="/clear">Clear</a></p>
+          </div>
+        </div>
+      </div> -->
+    </main>
+
+    <!-- Your web-app is https, so your scripts need to be too -->
+    <script
+      src="https://code.jquery.com/jquery-2.2.1.min.js"
+      integrity="sha256-gvQgAFzTH6trSrAWoH1iPo9Xc96QxSZ3feW6kem+O00="
+      crossorigin="anonymous"
+    ></script>
+    <script src="/client.js"></script>
+  </body>
+</html>

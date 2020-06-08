@@ -1,23 +1,58 @@
 body {
   font-family: helvetica, arial, sans-serif;
   text-align: center;
+  /* background-color: #e3e7ea; */
+  background-image: url("./background.png");
+  background-size: cover;
 }
+
+.btn-wide {
+  width: 300px;
+  height: 60px;
+  margin: 10px;
+  border-radius: 50px;
+  font-size: 18px;
+  font-weight: 500;
+  color: #708090;
+  transition: ease-in;
+}
+.btn-wide:hover {
+  color: #2272c2;
+}
+.btn-normal {
+  box-shadow: -3px -3px 7px #fcfcfc, 3px 3px 7px #bbc3cc;
+}
+
+.btn-normal:active {
+  box-shadow: -3px -3px 7px #f5f5f5 inset, 3px 3px 7px #bbc3cc inset;
+  font-size: 16px;
+  user-select: none;
+}
+
 input {
   color: none;
 }
 h4 {
   line-height: 1.2;
   font-weight: 300;
-  font-size: larger;
+
+  font-size: 30px;
+}
+h5 {
+  line-height: 1.2;
+  font-weight: 300;
 }
 .navbar {
   height: 80px;
-  background-color: rgb(46, 235, 216);
+  background-color: rgb(255, 255, 255);
 }
 .navbar a {
   color: white;
 }
-.card {
+.gameindex {
+  margin: auto;
+}
+/* .card {
   background: rgb(255, 255, 255);
   border-radius: 2px;
   display: inline-block;
@@ -28,7 +63,7 @@ h4 {
   position: relative;
   width: 1000px;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
-}
+} */
 .colorRect {
   display: flex;
   justify-content: center;

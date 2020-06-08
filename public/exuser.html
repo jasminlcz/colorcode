@@ -73,73 +73,40 @@
         <div class="container centered">
           <div class="start">
             <h4 class="mb-md">
-              Hey! Vielen Dank, dass du uns bei unserem Projekt unterstützt.
-              Wähle zuerst einen Namen und eine Farbe.
+              Willkommen zurück! Gebe hier deinen gespeicherte ID ein um deinen
+              Spielstand zu laden.
             </h4>
             <div class="row">
               <div class="col-md-12 pb-md">
                 <input
-                  id="name"
+                  id="uuid"
                   type="text"
                   size="30"
                   class="form-control"
-                  placeholder="Spielername"
+                  placeholder="User ID"
                   aria-label="Spielername"
                   aria-describedby="basic-addon2"
                 />
-              </div>
-              <div class="col-md-12 pb-md">
-                <input id="faveColor" type="color" />
               </div>
             </div>
 
             <div class="row pb-md">
               <div class="col-md-12">
-                <form id="userinformation">
+                <form id="finduser">
                   <button
                     type="button submit "
-                    class="btn btn-wide btn-normal"
-                    onclick="location.href='newuser.html';"
+                    class="btn btn-primary"
+                    onclick="location.href='game.html';"
                   >
-                    Neues Spiel starten
+                    Spielstand laden
                   </button>
                 </form>
               </div>
             </div>
-            <hr>
-            <div class="row">
-              <div class="col-md-12 pb-md">
-                <h5 class="mb-md">
-                  Wenn du das Farbenspiel schonmal gespielt hast kannst du es hier fortsetzen:
-                </h5>
-                <div class="col-md-12">
-                  <form>
-                    <button
-                      type="button"
-                      class="btn btn-wide btn-normal"
-                      onclick="location.href='exuser.html';"
-                    >
-                      Spiel fortsetzen
-                    </button>
-                  </form>
-                </div>
-            </div>
           </div>
         </div>
       </div>
-
-      <!-- <div class="row">
-        <div class="col-md-12">
-          <div class="surveys">
-            <p class="mt-md">Surveys:</p>
-            <ul id="surveys"></ul>
-            <p><a href="/clear">Clear</a></p>
-          </div>
-        </div>
-      </div> -->
     </main>
-
-   
 
     <!-- Your web-app is https, so your scripts need to be too -->
     <script
