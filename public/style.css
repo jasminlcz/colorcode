@@ -18,6 +18,7 @@ input.softui {
   height: 53px;
   box-shadow: inset -5px -5px 8px #ffffff, inset 4px 4px 20px #cfcfcf;
 }
+
 .btn-wide {
   height: 60px;
   padding-left: 30px;
@@ -27,7 +28,6 @@ input.softui {
   font-size: 18px;
   font-weight: 500;
   color: #708090;
-  transition: ease-in;
 }
 .btn-small {
   padding-left: 20px;
@@ -37,7 +37,6 @@ input.softui {
   font-size: 15px;
   font-weight: 500;
   color: #708090;
-  transition: ease-in;
 }
 .btn-wide:hover {
   color: #2272c2;
@@ -67,7 +66,8 @@ h5 {
 }
 .navbar {
   height: 80px;
-  background-color: rgb(255, 255, 255);
+  margin-left: 30px;
+  /* background-color: rgb(255, 255, 255); */
 }
 .navbar a {
   color: white;
