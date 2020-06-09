@@ -37,82 +37,64 @@
   </head>
   <body>
     <header>
-      <!-- <h1>
-        Simple Survey Example
-      </h1> -->
-      <div>
-        <nav class="navbar navbar-expand-lg navbar-light ">
-          <a class="navbar-brand" href="index.html">Farbenspiel</a>
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-toggle="collapse"
-            data-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
-    
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mr-auto">
-              <li class="nav-item ">
-                <a class="nav-link" href="index.html"
-                  >Das Spiel<span class="sr-only">(current)</span></a
-                >
-              </li>
-              <li class="nav-item active">
-                <a class="nav-link" href="rangliste.html">Rangliste</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="about.html">Über</a>
-              </li>
-              
-              
-              
-            </ul>
-           
-          </div>
-        </nav>
+      <nav class="navbar navbar-expand-lg navbar-light">
+        <a class="navbar-brand" href="index.html">Farbenspiel</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html"
+                >Das Spiel<span class="sr-only">(current)</span></a
+              >
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="rangliste.html">Rangliste</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">Über</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
     </header>
 
-    <main >
-        <div class="container card centered">
-            <table class="table">
-                <thead>
-                  <tr>
-                    <th scope="col">#</th>
-                    <th scope="col">First</th>
-                    <th scope="col">Last</th>
-                    <th scope="col">Handle</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <th scope="row">1</th>
-                    <td>Mark</td>
-                    <td>Otto</td>
-                    <td>@mdo</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">2</th>
-                    <td>Jacob</td>
-                    <td>Thornton</td>
-                    <td>@fat</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">3</th>
-                    <td>Larry</td>
-                    <td>the Bird</td>
-                    <td>@twitter</td>
-                  </tr>
-                </tbody>
-              </table>
-        </div>
-       
-      
-     
+    <main>
+      <div class="container card centered">
+        <table class="table">
+          <thead>
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">Spieler</th>
+              <th scope="col">Lieblingsfarbe</th>
+              <th scope="col">Level</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">1</th>
+              <td>Jazzer</td>
+              <td class="colorRect">
+                <div
+                  id="rechteck"
+                  style="height: 20px; width: 20px; background-color: #00ffd0;"
+                ></div>
+              </td>
+              <td>200</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
     </main>
 
     <script
@@ -129,11 +111,9 @@
       src="https://code.jquery.com/jquery-2.2.1.min.js"
       integrity="sha256-gvQgAFzTH6trSrAWoH1iPo9Xc96QxSZ3feW6kem+O00="
       crossorigin="anonymous"
-
-      
     ></script>
+
     <script src="/index.js"></script>
-    
+
   </body>
 </html>
-

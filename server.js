@@ -110,6 +110,7 @@ app.post("/surveys", function (request, response) {
   response.sendStatus(200);
 });
 
+
 /**
  * get rangliste
  */
@@ -126,6 +127,7 @@ app.get("/colors", function (request, response) {
 });
 
 // clear surveys - for testing
+
 app.get("/clear", function (request, response) {
   db.get("surveys").remove().write();
   db.get("users").remove().write();
