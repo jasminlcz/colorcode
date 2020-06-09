@@ -33,9 +33,6 @@
       integrity="sha256-KzZiKy0DWYsnwMF+X1DvQngQ2/FxF7MF3Ff72XcpuPs="
       crossorigin="anonymous"
     ></script>
-    
-    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-    
   </head>
   <body>
     <header>
@@ -76,98 +73,37 @@
         <div class="container centered">
           <div class="start">
             <h4 class="mb-md">
-              Hey! Vielen Dank, dass du uns bei unserem Projekt unterstützt.
-              Wähle zuerst einen Namen und eine Farbe.
+              Willkommen zurück! Gebe hier deinen gespeicherte ID ein um deinen
+              Spielstand zu laden.
             </h4>
-            <form id="userinformation">
-            <div class="row">
-              <div class="col-md-12 pb-md">
-                <input
-                  id="name"
-                  type="text"
-                  size="30"
-                  class="form-control softui"
-                  placeholder="Spielername"
-                  aria-label="Spielername"
-                  aria-describedby="basic-addon2"
-                  required
-                />
-              </div>
-              <div class="col-md-12 pb-md">
-                <input id="faveColor" type="color" />
-               
-              </div>
-              <!-- <div id="app" class="col-md-12 pb-md ">
-                <color-picker v-bind="color" @input="onInput"></color-picker>
-               
-              </div> -->
-              
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-md-12 pb-md">
-              <input
-                id="name"
-                type="text"
-                size="30"
-                class="form-control"
-                placeholder="Spielername"
-                aria-label="Spielername"
-                aria-describedby="basic-addon2"
-              />
-            </div>
-          </div>
-
-
-            <div class="row pb-md">
-
-              <div class="col-md-12">
-               
-                  <button
-                    type="button submit "
-                    class="btn btn-wide btn-normal"
-                    
-                  >
-                    Neues Spiel starten
-                  </button>
-                
-              </div>
-            </div>
-          </form>
-            <hr>
-            <div class="row">
-              <div class="col-md-12 pb-md">
-                <h5 class="mb-md">
-                  Wenn du das Farbenspiel schonmal gespielt hast kannst du es hier fortsetzen:
-                </h5>
-                <div class="col-md-12">
-                  <form>
-                    <button
-                      type="button"
-                      class="btn btn-wide btn-normal"
-                      onclick="location.href='exuser.html';"
-                    >
-                      Spiel fortsetzen
-                    </button>
-                  </form>
+            <form id="finduser">
+              <div class="row">
+                <div class="col-md-12 pb-md">
+                  <input
+                    id="uuid"
+                    type="text"
+                    size="30"
+                    class="form-control softui"
+                    placeholder="User ID"
+                    aria-label="Spielername"
+                    aria-describedby="basic-addon2"
+                    required
+                  />
                 </div>
-            </div>
-          </div>
-        </div>
-      </div>
+              </div>
 
-      <div class="row">
-        <div class="col-md-12">
-          <div class="surveys">
-            <p class="mt-md">Surveys:</p>
-            <ul id="surveys"></ul>
-            <p><a href="/clear">Clear</a></p>
+              <div class="row pb-md">
+                <div class="col-md-12">
+                  <button type="button submit " class="btn btn-wide btn-normal">
+                    Spielstand laden
+                  </button>
+                </div>
+              </div>
+            </form>
           </div>
         </div>
       </div>
     </main>
-
-   
 
     <!-- Your web-app is https, so your scripts need to be too -->
     <script
@@ -175,8 +111,6 @@
       integrity="sha256-gvQgAFzTH6trSrAWoH1iPo9Xc96QxSZ3feW6kem+O00="
       crossorigin="anonymous"
     ></script>
-    <script src="/colorpicker.js"></script>
     <script src="/index.js"></script>
-    
   </body>
 </html>

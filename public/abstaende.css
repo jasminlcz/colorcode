@@ -1,6 +1,22 @@
 .container {
   max-width: 1000px;
 }
+.startscreen {
+  position: relative;
+}
+.container2 {
+  margin: 50px;
+}
+/* .parent {
+  width: 100%;
+  height: 100%;
+  display: table;
+  text-align: center;
+}
+.parent > .child {
+  display: table-cell;
+  vertical-align: middle;
+} */
 .m-0 {
   margin: 0 !important;
 }
