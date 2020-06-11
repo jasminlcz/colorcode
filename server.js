@@ -29,10 +29,9 @@ db.defaults({ surveys: [], users: [] }).write();
  */
 app.post("/newuser", function (request, response) {
   const username = request.query.username;
-  const favColor = request.query.favColor;
   const uuid = create_UUID();
   db.get("users")
-    .push({ name: username, uuid: uuid, favColor: favColor, doneColors: [] })
+    .push({ name: username, uuid: uuid, favColor: "", doneColors: [] })
     .write();
   const user = db.get("users").find({ uuid: uuid }).value();
   if (user) {
@@ -54,6 +53,21 @@ app.get("/searchuser", function (request, response) {
   } else {
     response.sendStatus(404);
   }
+});
+
+/**
+ * Update Color
+ * @query uuid, newfavcolor
+ */
+app.post("/updatecolor", function (request, response) {
+  const useruuid = request.query.uuid;
+  const newfavcolor = request.query.newfavcolor;
+  db.get("users")
+    .find({ uuid: useruuid })
+    .assign({ favColor: newfavcolor })
+    .write();
+
+  response.sendStatus(200);
 });
 
 /**
@@ -109,7 +123,6 @@ app.post("/surveys", function (request, response) {
   console.log("New survey inserted");
   response.sendStatus(200);
 });
-
 
 /**
  * get rangliste

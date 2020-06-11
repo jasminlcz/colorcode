@@ -13,6 +13,7 @@
     />
     <link rel="stylesheet" href="/style.css" />
     <link rel="stylesheet" href="/abstaende.css" />
+
     <script
       src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
       integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
@@ -73,45 +74,64 @@
         <div class="container centered">
           <div class="start">
             <h4 class="mb-md">
-              Hallo <span style="color: blue;" id="username"></span>. Gleich gehts los! Mit der 
-              folgenden ID kannst deinen Fortschritt jederzeit laden und weiterspielen. <br>
+              Hallo <span style="color: blue;" id="username"></span>. Gleich
+              gehts los! Mit der folgenden ID kannst deinen Fortschritt
+              jederzeit laden und weiterspielen. <br />
               Speicher sie dir am besten direkt ab.
             </h4>
-            <div class="row">
-              <div class="col-md-10 pb-md">
-                <input
-                  id="showuuid"
-                  type="text"
-                  size="30"
-                  class="form-control softui"
-                  placeholder=""
-                  aria-label="Showuuid"
-                  aria-describedby="basic-addon2"
-                />
-              </div>
-              <div class="col-md-2 pb-md">
-                <button class="btn btn-small btn-normal" onclick="myFunction()">ID kopieren</button>
-              </div>
-            </div>
-
-            <div class="row pb-md">
-              <div class="col-md-12">
+            <form id="updatefavcolor">
+              <div class="row">
+                <div class="col-md-10 pb-md">
+                  <input
+                    id="showuuid"
+                    type="text"
+                    size="30"
+                    class="form-control softui"
+                    placeholder=""
+                    aria-label="Showuuid"
+                    aria-describedby="basic-addon2"
+                  />
+                </div>
+                <div class="col-md-2 pb-md">
                   <button
-                    type="button"
-                    class="btn btn-wide btn-normal"
-                    onclick="location.href='game.html';"
+                    class="btn btn-small btn-normal"
+                    onclick="myFunction()"
                   >
+                    ID kopieren
+                  </button>
+                </div>
+
+                <div class="col-md-12 pb-md">
+                  <h4 class="mb-md">
+                    Wähle als nächstes noch deine Liebslinsgfarbe aus
+                  </h4>
+                  <div ng-app="app">
+                    <color-picker color="foo"></color-picker>
+                    <input
+                      id="newfavcolor"
+                      type="text"
+                      ng-model="foo"
+                      disabled
+                      style="display: none;"
+                    />
+                  </div>
+
+                  <!-- <input id="faveColor" type="color" /> -->
+                </div>
+              </div>
+
+              <div class="row pb-md">
+                <div class="col-md-12">
+                  <button type="button submit" class="btn btn-wide btn-normal">
                     Los gehts!
                   </button>
-                </form>
+                </div>
               </div>
-            </div>
+            </form>
           </div>
         </div>
       </div>
     </main>
-
-    
 
     <!-- Your web-app is https, so your scripts need to be too -->
     <script
@@ -119,6 +139,17 @@
       integrity="sha256-gvQgAFzTH6trSrAWoH1iPo9Xc96QxSZ3feW6kem+O00="
       crossorigin="anonymous"
     ></script>
+    <script
+      type="text/javascript"
+      src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"
+    ></script>
+    <script type="text/javascript">
+      (function () {
+        "use strict";
+        angular.module("app", ["colorPicker"]);
+      })();
+    </script>
+    <script src="/colorpicker.js"></script>
     <script src="/newuser.js"></script>
   </body>
 </html>
