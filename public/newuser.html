@@ -73,40 +73,41 @@
       <div id="slide1" style="display: block;">
         <div class="container centered">
           <div class="start">
-            <h4 class="mb-md">
-              Hallo <span style="color: blue;" id="username"></span>. Gleich
-              gehts los! Mit der folgenden ID kannst deinen Fortschritt
+            <h2 class="pb-md">
+              Hallo <span style="color: blue;" id="username"></span>!
+            </h2>
+            <h5 class="mb-md">
+              Gleich gehts los! Mit der folgenden ID kannst deinen Fortschritt
               jederzeit laden und weiterspielen. <br />
               Speicher sie dir am besten direkt ab.
-            </h4>
+            </h5>
+
+            <div class="row">
+              <div class="col-md-10 pb-md">
+                <input
+                  id="showuuid"
+                  type="text"
+                  size="30"
+                  class="form-control softui"
+                  placeholder=""
+                  aria-label="Showuuid"
+                  aria-describedby="basic-addon2"
+                />
+              </div>
+              <div class="col-md-2 pb-md">
+                <button class="btn btn-small btn-normal" onclick="myFunction()">
+                  ID kopieren
+                </button>
+              </div>
+            </div>
             <form id="updatefavcolor">
               <div class="row">
-                <div class="col-md-10 pb-md">
-                  <input
-                    id="showuuid"
-                    type="text"
-                    size="30"
-                    class="form-control softui"
-                    placeholder=""
-                    aria-label="Showuuid"
-                    aria-describedby="basic-addon2"
-                  />
-                </div>
-                <div class="col-md-2 pb-md">
-                  <button
-                    class="btn btn-small btn-normal"
-                    onclick="myFunction()"
-                  >
-                    ID kopieren
-                  </button>
-                </div>
-
                 <div class="col-md-12 pb-md">
-                  <h4 class="mb-md">
+                  <h5 class="mb-md">
                     Wähle als nächstes noch deine Liebslinsgfarbe aus
-                  </h4>
+                  </h5>
                   <div ng-app="app">
-                    <color-picker color="foo"></color-picker>
+                    <color-picker id="colorcircle" color="foo"></color-picker>
                     <input
                       id="newfavcolor"
                       type="text"

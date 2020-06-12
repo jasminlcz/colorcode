@@ -2,14 +2,19 @@ body {
   font-family: helvetica, arial, sans-serif;
   text-align: center;
 
-  /* background-color: #e3e7ea; */
-  background-image: url("./background.png");
+  background-color: #eeeeee;
+  /* background-image: url("./background.png"); */
   background-size: cover;
 }
 #colorrect {
   border: 12px solid #eeeeee;
   box-shadow: -3px -3px 7px #fcfcfc, 3px 3px 7px #bbc3cc;
   border-radius: 51.5px;
+}
+#colorcircle {
+  border: 12px solid #eeeeee;
+  box-shadow: -3px -3px 7px #fcfcfc, 3px 3px 7px #bbc3cc;
+  border-radius: 50%;
 }
 input.softui {
   background: #f0f0f0;
