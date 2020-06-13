@@ -32,5 +32,5 @@ function myFunction() {
   document.execCommand("copy");
 
   /* Alert the copied text */
-  alert("Copied the text: " + copyText.value);
+  alert("ID wurde kopiert: " + copyText.value);
 }

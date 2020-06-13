@@ -14,6 +14,26 @@ $(function () {
     }
   );
 
+  var sliders = document.querySelectorAll(".slider");
+  sliders.forEach((slider) => {
+    let s = document.createElement("style");
+    document.head.appendChild(s);
+    console.log(slider);
+    slider.addEventListener("input", () => {
+      if (slider.value < 50) {
+        s.textContent = `#${slider.id}::-webkit-slider-thumb{border: ${
+          slider.value / 3
+        }px solid #eeeeee; background-color: ${activColor}}`;
+      } else if (slider.value > 50) {
+        s.textContent = `#${slider.id}::-webkit-slider-thumb{border: ${
+          (100 - slider.value) / 3
+        }px solid #eeeeee; background-color: ${activColor}}`;
+      } else {
+        s.textContent = `#${slider.id}::-webkit-slider-thumb{border: none; background-color: #eeeeee}`;
+      }
+    });
+  });
+
   $("form#survey").submit(function (event) {
     event.preventDefault();
 
