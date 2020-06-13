@@ -2,15 +2,19 @@ body {
   font-family: helvetica, arial, sans-serif;
   text-align: center;
 
-  /* background-color: #e3e7ea; */
-  background-image: url("./background.png");
+  background-color: #eeeeee;
+  /* background-image: url("./background.png"); */
   background-size: cover;
-
 }
 #colorrect {
   border: 12px solid #eeeeee;
   box-shadow: -3px -3px 7px #fcfcfc, 3px 3px 7px #bbc3cc;
   border-radius: 51.5px;
+}
+#colorcircle {
+  border: 12px solid #eeeeee;
+  box-shadow: -3px -3px 7px #fcfcfc, 3px 3px 7px #bbc3cc;
+  border-radius: 50%;
 }
 input.softui {
   background: #f0f0f0;
@@ -19,6 +23,39 @@ input.softui {
   padding-left: 30px;
   height: 53px;
   box-shadow: inset -5px -5px 8px #ffffff, inset 4px 4px 20px #cfcfcf;
+}
+
+.color-picker {
+  display: inline-block;
+  position: relative;
+}
+.color-picker input {
+  display: none;
+}
+.canvas-wrapper {
+  border-radius: 1000px;
+  overflow: hidden;
+}
+.indicator {
+  top: calc(50% - 2rem);
+  left: 50%;
+  display: block;
+  position: absolute;
+  background-color: transparent;
+  transform: translate3d(-50%, -2rem, 0);
+  pointer-events: none;
+}
+.indicator .selected-color {
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  right: 2px;
+  bottom: 30%;
+  border-radius: 1000px;
+  z-index: -1;
+  background-color: #fff;
+  -webkit-filter: drop-shadow(0 5px 15px rgba(0, 0, 0, 0.5));
+  filter: drop-shadow(0 5px 15px rgba(0, 0, 0, 0.5));
 }
 
 .btn-wide {
@@ -74,9 +111,7 @@ h5 {
 .navbar {
   height: 80px;
 
-  margin-left: 30px;
   /* background-color: rgb(255, 255, 255); */
-
 }
 .navbar a {
   color: white;
@@ -112,36 +147,6 @@ h5 {
   left: 50%;
   /* bring your own prefixes */
   transform: translate(-50%, -50%);
-}
-
-.slider {
-  -webkit-appearance: none;
-  width: 100%;
-  height: 10px;
-  border-radius: 5px;
-  background: #d3d3d3;
-  outline: none;
-  opacity: 0.7;
-  -webkit-transition: 0.2s;
-  transition: opacity 0.2s;
-}
-
-.slider::-webkit-slider-thumb {
-  -webkit-appearance: none;
-  appearance: none;
-  width: 25px;
-  height: 25px;
-  border-radius: 50%;
-  background: #969696;
-  cursor: pointer;
-}
-
-.slider::-moz-range-thumb {
-  width: 25px;
-  height: 25px;
-  border-radius: 50%;
-  background: #acacac;
-  cursor: pointer;
 }
 
 @media screen and (max-width: 768px) {

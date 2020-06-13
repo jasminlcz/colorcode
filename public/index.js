@@ -5,12 +5,10 @@ $(function () {
   $("form#userinformation").submit(function (event) {
     event.preventDefault();
     var name = $("input#name").val();
-    var favColor = $("input#faveColor").val();
     $.post(
       "/newuser?" +
         $.param({
           username: name,
-          favColor: favColor,
         }),
       function (user) {
         localStorage.setItem("user", JSON.stringify(user));
