@@ -24,6 +24,7 @@ input.softui {
   height: 53px;
   box-shadow: inset -5px -5px 8px #ffffff, inset 4px 4px 20px #cfcfcf;
 }
+
 .color-picker {
   display: inline-block;
   position: relative;

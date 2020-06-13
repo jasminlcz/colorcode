@@ -1,7 +1,10 @@
 $(function () {
   const activUser = JSON.parse(localStorage.getItem("user"));
+  console.log(activUser);
   var activColor = "";
   $("#username").text(activUser.name);
+  $("#activlevel").text(activUser.level);
+  $("#activpoints").text(activUser.points);
   $("#showuuid").val(activUser.uuid);
   $.get(
     "/randomcolor?" +
@@ -53,9 +56,16 @@ $(function () {
           warm_kalt: warm_kalt,
           gewöhnlich_individuell: gewöhnlich_individuell,
           color: activColor,
-        })
+        }),
+      function (user) {
+        localStorage.setItem("user", JSON.stringify(user));
+        if (user.level > activUser.level) {
+          window.location.replace("../level.html");
+        } else {
+          window.location.replace("../game.html");
+        }
+      }
     );
-    window.location.replace("../game.html");
   });
 });
 function gofromtoslide(actSlide, nextslide) {

@@ -35,3 +35,17 @@
     background: #acacac;
     cursor: pointer;
   } */
+.level {
+  position: absolute;
+  left: 2%;
+  top: 85%;
+}
+.softui {
+  text-align: left;
+  background: #f0f0f0;
+  border-radius: 20px;
+  padding: 20px;
+  border: none;
+
+  box-shadow: inset -5px -5px 8px #ffffff, inset 4px 4px 20px #cfcfcf;
+}

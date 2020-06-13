@@ -33,7 +33,7 @@ app.post("/newuser", function (request, response) {
   db.get("users")
     .push({ name: username, uuid: uuid, favColor: "", doneColors: [] })
     .write();
-  const user = db.get("users").find({ uuid: uuid }).value();
+  const user = get_user(uuid);
   if (user) {
     response.status(200).send(user);
   } else {
@@ -47,7 +47,7 @@ app.post("/newuser", function (request, response) {
  */
 app.get("/searchuser", function (request, response) {
   const uuid = request.query.uuid;
-  const user = db.get("users").find({ uuid: uuid }).value();
+  const user = get_user(uuid);
   if (user) {
     response.status(200).send(user);
   } else {
@@ -121,7 +121,8 @@ app.post("/surveys", function (request, response) {
     .push(request.query.color)
     .write();
   console.log("New survey inserted");
-  response.sendStatus(200);
+  const user = get_user(request.query.uuid);
+  response.status(200).send(user);
 });
 
 /**
@@ -164,4 +165,16 @@ function create_UUID() {
     return (c == "x" ? r : (r & 0x3) | 0x8).toString(16);
   });
   return uuid;
+}
+
+function get_user(uuid) {
+  let user = db.get("users").find({ uuid: uuid }).value();
+  user.level = Math.floor(user.doneColors.length / 5) + 1;
+  var points = 0;
+  for (let level = 1; level < user.level; level++) {
+    points += level * 5 * 5;
+  }
+  points += user.level * 5 * (user.doneColors.length % 5);
+  user.points = points;
+  return user;
 }
