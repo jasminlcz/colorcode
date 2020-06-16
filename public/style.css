@@ -1,9 +1,9 @@
 body {
-  font-family: halyard-micro,sans-serif;
-font-weight: 700;
-font-style: normal;
-text-align: center;
-color: #1a1559;
+  font-family: halyard-micro, sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  text-align: center;
+  color: #1a1559;
 
   background-color: #f1f2f7;
   /* background-image: url("./background.png"); */
@@ -25,7 +25,6 @@ input.softui {
   border: none;
   padding-left: 30px;
   height: 53px;
-  width: 60%;
   box-shadow: inset -5px -5px 8px #ffffff, inset 4px 4px 15px #dae1eb;
 }
 
@@ -70,8 +69,8 @@ input.softui {
   background-color: #1a1559;
   border-radius: 50px;
   font-family: halyard-micro, sans-serif;
-font-weight: 400;
-font-style: normal;
+  font-weight: 400;
+  font-style: normal;
   font-size: 18px;
   color: #ffffff;
 }
@@ -83,12 +82,11 @@ font-style: normal;
   margin: 10px;
   background-color: #f1f2f7;
   border-radius: 50px;
-font-weight: 400;
-font-style: normal;
+  font-weight: 400;
+  font-style: normal;
   font-size: 18px;
   color: #1a1559;
 }
-
 
 .btn-small {
   padding-left: 20px;
@@ -96,10 +94,10 @@ font-style: normal;
   height: 50px;
   background-color: #1a1559;
   border-radius: 50px;
-  
+
   font-family: halyard-micro, sans-serif;
-font-weight: 400;
-font-style: normal;
+  font-weight: 400;
+  font-style: normal;
   font-size: 15px;
   color: #ffffff;
 }
@@ -121,33 +119,31 @@ input {
   color: none;
 }
 h4 {
-
   line-height: 1.2;
   font-weight: 700;
   font-size: 30px;
 }
 h5 {
-
   line-height: 1.2;
   font-weight: 400;
   font-size: 16px;
 }
 .text {
-  font-family: halyard-micro,sans-serif;
+  font-family: halyard-micro, sans-serif;
   height: 200px;
   background-color: tomato;
 }
 
 .navbar {
-  font-family: halyard-micro,sans-serif;
+  font-family: halyard-micro, sans-serif;
   font-weight: 400;
   font-size: 16px;
   color: #1a1559;
 }
-  height: 80px;
+/* height: 80px; */
 
-  /* background-color: rgb(255, 255, 255); */
-}
+/* background-color: rgb(255, 255, 255); */
+
 .navbar a {
   color: white;
 }
