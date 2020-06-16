@@ -11,9 +11,9 @@
       integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="/style.css" />
-    <link rel="stylesheet" href="/abstaende.css" />
-    <link rel="stylesheet" href="/index.css" />
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="stylesheet" href="../abstaende.css" />
+    <link rel="stylesheet" href="level.css" />
     <link rel="stylesheet" href="https://use.typekit.net/zvc1tbo.css" />
     <script
       src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
@@ -43,13 +43,10 @@
     <div id="rect2"></div>
     <div id="rect3"></div>
     <div id="rect4"></div>
-    <div id="rect5"></div>
-    <div id="rect6"></div>
-    <div id="rect7"></div>
 
     <header>
       <nav class="navbar navbar-expand-lg navbar-light">
-        <a class="navbar-brand" href="index.html"> Farbenspiel</a>
+        <a class="navbar-brand" href="index.php"> Farbenspiel</a>
         <button
           class="navbar-toggler"
           type="button"
@@ -65,7 +62,7 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
-              <a class="nav-link" href="index.html"
+              <a class="nav-link" href="index.php"
                 >Das Spiel<span class="sr-only">(current)</span></a
               >
             </li>
@@ -81,25 +78,47 @@
     </header>
 
     <main>
+      <linearGradient id="gradient-1">
+        <stop offset="0" stop-color="#00d5bd" />
+        <stop offset="100" stop-color="#24c1ed" />
+      </linearGradient>
       <div id="slide1" style="display: block;">
         <div class="container centered">
           <div class="start">
             <h1 class="mb-xl">
-              Das war super! Weiter so :)
+              Das war super!
             </h1>
-            <div class="levelPoints"></div>
+            <h1>
+              <span id="activpoints"></span> <br />
+              Punkte
+            </h1>
+            <div class="pt-xl">
+              <button
+                type="button "
+                class="btn primary btn-normal"
+                onclick="location.href='../game/game.html';"
+              >
+                Weiter mit Level <span id="activlevel"></span>
+              </button>
+            </div>
+            <div class="">
+              <button type="button" class="btn secondary btn-normal">
+                Ruhm und Ehre ist nichts für mich. Ich bin raus
+              </button>
+            </div>
           </div>
         </div>
       </div>
     </main>
 
     <!-- Your web-app is https, so your scripts need to be too -->
+
     <script
       src="https://code.jquery.com/jquery-2.2.1.min.js"
       integrity="sha256-gvQgAFzTH6trSrAWoH1iPo9Xc96QxSZ3feW6kem+O00="
       crossorigin="anonymous"
     ></script>
-    <script src="/colorpicker.js"></script>
-    <script src="/index.js"></script>
+    s
+    <script src="../game/game.js"></script>
   </body>
 </html>

@@ -1,3 +1,13 @@
+#colorrect {
+  border: 12px solid var(--main-bg-color);
+  box-shadow: -10px -10px 15px #ffffff, 10px 10px 15px #dae1eb;
+  border-radius: 51.5px;
+}
+.colorRect {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .slider {
   -webkit-appearance: none;
   background: #f1f2f7;
@@ -41,7 +51,7 @@
   top: 85%;
 }
 .softui {
-  font-family: halyard-micro,sans-serif;
+  font-family: halyard-micro, sans-serif;
   text-align: left;
   background: #f1f2f7;
   border-radius: 20px;

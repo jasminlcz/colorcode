@@ -14,7 +14,7 @@ $(function () {
           newfavcolor: newfavcolor,
         }),
       function () {
-        window.location.replace("../game.html");
+        window.location.replace("../game/game.html");
       }
     );
   });

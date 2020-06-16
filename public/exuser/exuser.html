@@ -11,10 +11,9 @@
       integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="/style.css" />
-    <link rel="stylesheet" href="/abstaende.css" />
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="stylesheet" href="../abstaende.css" />
     <link rel="stylesheet" href="https://use.typekit.net/zvc1tbo.css" />
-
     <script
       src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
       integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
@@ -39,7 +38,7 @@
   <body>
     <header>
       <nav class="navbar navbar-expand-lg navbar-light">
-        <a class="navbar-brand" href="index.html"> Farbenspiel</a>
+        <a class="navbar-brand" href="../index.html"> Farbenspiel</a>
         <button
           class="navbar-toggler"
           type="button"
@@ -55,15 +54,17 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
-              <a class="nav-link" href="index.html"
+              <a class="nav-link" href="../index.html"
                 >Das Spiel<span class="sr-only">(current)</span></a
               >
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="rangliste.html">Rangliste</a>
+              <a class="nav-link" href="../rangliste/rangliste.html"
+                >Rangliste</a
+              >
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="about.html">Über</a>
+              <a class="nav-link" href="../about/about.html">Über</a>
             </li>
           </ul>
         </div>
@@ -74,58 +75,30 @@
       <div id="slide1" style="display: block;">
         <div class="container centered">
           <div class="start">
-            <h2 class="pb-md">
-              Hallo <span style="color: rgb(0, 94, 255);" id="username"></span>!
-            </h2>
-            <h5 class="mb-md">
-              Gleich gehts los! Mit der folgenden ID kannst deinen Fortschritt
-              jederzeit laden und weiterspielen. <br />
-              Speicher sie dir am besten direkt ab.
-            </h5>
-
-            <div class="row">
-              <div class="col-md-10 pb-md">
-                <input
-                  id="showuuid"
-                  type="text"
-                  size="30"
-                  class="form-control softui"
-                  placeholder=""
-                  aria-label="Showuuid"
-                  aria-describedby="basic-addon2"
-                />
-              </div>
-              <div class="col-md-2 pb-md">
-                <button class="btn btn-small btn-normal" onclick="myFunction()">
-                  ID kopieren
-                </button>
-              </div>
-            </div>
-            <form id="updatefavcolor">
+            <h4 class="mb-md">
+              Willkommen zurück! Gebe hier deinen gespeicherte ID ein um deinen
+              Spielstand zu laden.
+            </h4>
+            <form id="finduser">
               <div class="row">
                 <div class="col-md-12 pb-md">
-                  <h5 class="mb-md">
-                    Wähle als nächstes noch deine Liebslinsgfarbe aus
-                  </h5>
-                  <div ng-app="app">
-                    <color-picker id="colorcircle" color="foo"></color-picker>
-                    <input
-                      id="newfavcolor"
-                      type="text"
-                      ng-model="foo"
-                      disabled
-                      style="display: none;"
-                    />
-                  </div>
-
-                  <!-- <input id="faveColor" type="color" /> -->
+                  <input
+                    id="uuid"
+                    type="text"
+                    size="30"
+                    class="form-control softui"
+                    placeholder="User ID"
+                    aria-label="Spielername"
+                    aria-describedby="basic-addon2"
+                    required
+                  />
                 </div>
               </div>
 
               <div class="row pb-md">
                 <div class="col-md-12">
-                  <button type="button submit" class="btn primary btn-normal">
-                    Los gehts!
+                  <button type="button submit " class="btn primary btn-normal">
+                    Spielstand laden
                   </button>
                 </div>
               </div>
@@ -141,17 +114,6 @@
       integrity="sha256-gvQgAFzTH6trSrAWoH1iPo9Xc96QxSZ3feW6kem+O00="
       crossorigin="anonymous"
     ></script>
-    <script
-      type="text/javascript"
-      src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"
-    ></script>
-    <script type="text/javascript">
-      (function () {
-        "use strict";
-        angular.module("app", ["colorPicker"]);
-      })();
-    </script>
-    <script src="/colorpicker.js"></script>
-    <script src="/newuser.js"></script>
+    <script src="../index.js"></script>
   </body>
 </html>
