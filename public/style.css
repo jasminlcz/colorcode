@@ -1,7 +1,6 @@
 body {
   font-family: halyard-micro, sans-serif;
-  font-weight: 700;
-  font-style: normal;
+
   text-align: center;
   color: #1a1559;
 
@@ -79,7 +78,7 @@ input.softui {
   padding-left: 30px;
   padding-right: 30px;
   margin: 10px;
-  /* background-color: #1a1559; */
+
   border-radius: 50px;
   font-family: halyard-micro, sans-serif;
   font-weight: 400;
@@ -101,8 +100,8 @@ input.softui {
   font-size: 15px;
   color: #ffffff;
 }
-.btn-wide:hover {
-  color: #2272c2;
+.primary:hover {
+  color: #ffffff;
 }
 .btn-normal {
   box-shadow: -10px -10px 15px #ffffff, 10px 10px 15px #dae1eb;
@@ -118,9 +117,14 @@ input.softui {
 input {
   color: none;
 }
+h1 {
+  line-height: 1.2;
+  font-weight: 300;
+  font-size: 40px;
+}
 h4 {
   line-height: 1.2;
-  font-weight: 700;
+  font-weight: 500;
   font-size: 30px;
 }
 h5 {

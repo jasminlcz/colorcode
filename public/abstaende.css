@@ -1,6 +1,9 @@
 .container {
   max-width: 1000px;
 }
+.container2 {
+  max-width: 1200px;
+}
 .startscreen {
   position: relative;
 }
