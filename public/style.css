@@ -61,7 +61,7 @@ input.softui {
   filter: drop-shadow(0 5px 15px rgba(0, 0, 0, 0.5));
 }
 
-.btn-wide {
+.primary {
   height: 60px;
   padding-left: 30px;
   padding-right: 30px;
@@ -74,14 +74,14 @@ input.softui {
   font-size: 18px;
   color: #ffffff;
 }
-
-.btn-secondary {
+.secondary {
   height: 60px;
   padding-left: 30px;
   padding-right: 30px;
   margin: 10px;
-  background-color: #f1f2f7;
+  /* background-color: #1a1559; */
   border-radius: 50px;
+  font-family: halyard-micro, sans-serif;
   font-weight: 400;
   font-style: normal;
   font-size: 18px;
