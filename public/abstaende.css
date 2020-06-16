@@ -105,6 +105,7 @@
 
 .mb-xl {
   margin-bottom: 70px !important;
+  font-weight: 700;
 }
 
 @media screen and (max-width: 992px) {
@@ -286,6 +287,7 @@
 
 .col-xs-2 {
   width: 16.66667%;
+  font-weight: 400;
 }
 
 .col-xs-3 {
