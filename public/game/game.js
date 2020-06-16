@@ -60,9 +60,9 @@ $(function () {
       function (user) {
         localStorage.setItem("user", JSON.stringify(user));
         if (user.level > activUser.level) {
-          window.location.replace("../level.html");
+          window.location.replace("../levelup/level.html");
         } else {
-          window.location.replace("../game.html");
+          window.location.replace("../game/game.html");
         }
       }
     );

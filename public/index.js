@@ -13,7 +13,7 @@ $(function () {
       function (user) {
         localStorage.setItem("user", JSON.stringify(user));
         console.log(user);
-        window.location.replace("../newuser.html");
+        window.location.replace("../newuser/newuser.html");
       }
     );
   });
@@ -28,7 +28,7 @@ $(function () {
         }),
       function (user) {
         localStorage.setItem("user", JSON.stringify(user));
-        window.location.replace("../game.html");
+        window.location.replace("../game/game.html");
         console.log(user);
       }
     );
