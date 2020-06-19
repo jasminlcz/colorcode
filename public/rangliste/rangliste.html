@@ -73,29 +73,17 @@
     </header>
 
     <main>
-      <div class="container card centered">
+      <div class="container rankingbody centered">
         <table class="table">
           <thead>
             <tr>
               <th scope="col">#</th>
               <th scope="col">Spieler</th>
               <th scope="col">Lieblingsfarbe</th>
-              <th scope="col">Level</th>
+              <th scope="col">Punkte</th>
             </tr>
           </thead>
-          <tbody>
-            <tr>
-              <th scope="row">1</th>
-              <td>Jazzer</td>
-              <td class="colorRect">
-                <div
-                  id="rechteck"
-                  style="height: 20px; width: 20px; background-color: #00ffd0;"
-                ></div>
-              </td>
-              <td>200</td>
-            </tr>
-          </tbody>
+          <tbody id="rankingbody"></tbody>
         </table>
       </div>
     </main>
@@ -115,5 +103,7 @@
       integrity="sha256-gvQgAFzTH6trSrAWoH1iPo9Xc96QxSZ3feW6kem+O00="
       crossorigin="anonymous"
     ></script>
+    <script src="../game/game.js"></script>
+    <script src="rangliste.js"></script>
   </body>
 </html>
