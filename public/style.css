@@ -15,16 +15,16 @@ body {
 }
 h1 {
   line-height: 1.5;
-  font-weight: 300;
+  font-weight: 700;
   font-size: 40px;
 }
 h4 {
-  line-height: 1.2;
+  line-height: 1.6;
   font-weight: 500;
   font-size: 30px;
 }
 h5 {
-  line-height: 1.2;
+  line-height: 1.6;
   font-weight: 400;
   font-size: 16px;
 }

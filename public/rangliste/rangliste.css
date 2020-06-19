@@ -10,10 +10,11 @@
 }
 .rankingbody {
   box-shadow: -10px -10px 15px #ffffff, 10px 10px 15px #dae1eb;
-  border-radius: 50px;
+  border-radius: 30px;
   font-family: halyard-micro, sans-serif;
   color: #ffffff;
 }
+
 thead tr th {
   border-top: none !important;
 }
