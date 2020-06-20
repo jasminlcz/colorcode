@@ -12,7 +12,7 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="../style.css" />
-    <link rel="stylesheet" href="newuser.css" />
+    <!-- <link rel="stylesheet" href="newuser.css" /> -->
     <link rel="stylesheet" href="../abstaende.css" />
     <link rel="stylesheet" href="https://use.typekit.net/zvc1tbo.css" />
 
@@ -75,11 +75,15 @@
       <div id="slide1" style="display: block;">
         <div class="container centered">
           <div class="start">
-            <h1 class="pb-md">Hallo <span id="username"></span>!</h1>
+            <h1 class="pb-md">
+              Bis zum nächsten mal <span id="username"></span>!
+            </h1>
             <h5 class="mb-md">
-              Gleich gehts los! Wähle als hier noch deine Liebslinsgfarbe.
+              Wenn du das Spiel jetzt beendest brauchst du diese ID um deinen
+              Spielstand zu einem späteren Zeitpunk aurufen zu können. <br />
+              Speicher sie dir am besten direkt ab!
             </h5>
-            <!-- <div class="row">
+            <div class="row">
               <div class="col-md-10 pb-md">
                 <input
                   id="showuuid"
@@ -96,36 +100,21 @@
                   ID kopieren
                 </button>
               </div>
-            </div> -->
-            <form id="updatefavcolor">
-              <div class="row">
-                <div class="col-md-12 pb-md">
-                  <!-- <h5 class="mb-md">
-                    Wähle als nächstes noch deine Liebslinsgfarbe aus
-                  </h5> -->
-                  <div ng-app="app">
-                    <color-picker id="colorcircle" color="foo"></color-picker>
-                    <input
-                      id="newfavcolor"
-                      type="text"
-                      ng-model="foo"
-                      disabled
-                      style="display: none;"
-                    />
-                  </div>
+            </div>
 
-                  <!-- <input id="faveColor" type="color" /> -->
-                </div>
+            <div class="row pb-md">
+              <div class="col-md-12">
+                <!-- <form id="logout"> -->
+                <button
+                  type="button"
+                  class="btn secondary btn-normal"
+                  onclick="location.href='../index.html';"
+                >
+                  Logout
+                </button>
+                <!-- </form> -->
               </div>
-
-              <div class="row pb-md">
-                <div class="col-md-12">
-                  <button type="button submit" class="btn primary btn-normal">
-                    Los gehts!
-                  </button>
-                </div>
-              </div>
-            </form>
+            </div>
           </div>
         </div>
       </div>
@@ -137,17 +126,8 @@
       integrity="sha256-gvQgAFzTH6trSrAWoH1iPo9Xc96QxSZ3feW6kem+O00="
       crossorigin="anonymous"
     ></script>
-    <script
-      type="text/javascript"
-      src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"
-    ></script>
-    <script type="text/javascript">
-      (function () {
-        "use strict";
-        angular.module("app", ["colorPicker"]);
-      })();
-    </script>
-    <script src="colorpicker.js"></script>
-    <script src="newuser.js"></script>
+
+    <script src="../newuser/newuser.js"></script>
+    <script src="logout.js"></script>
   </body>
 </html>
