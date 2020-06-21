@@ -1,5 +1,6 @@
 const express = require("express");
 const bodyParser = require("body-parser");
+const chroma = require("chroma-js");
 
 // setup webserver
 const app = express();
@@ -113,6 +114,7 @@ app.post("/surveys", function (request, response) {
       warm_kalt: request.query.warm_kalt,
       gewöhnlich_individuell: request.query.gewöhnlich_individuell,
       color: request.query.color,
+      hsl: chroma(request.query.color).hsl(),
     })
     .write();
   db.get("users")
