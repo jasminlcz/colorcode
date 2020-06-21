@@ -38,48 +38,54 @@ $(function () {
   });
 
   $("form#survey").submit(function (event) {
-    event.preventDefault();
-
     var zeitgemaess_zeitlos = $("input#zeitgemaess_zeitlos").val();
     var kraftvoll_sanft = $("input#kraftvoll_sanft").val();
     var verspielt_ernst = $("input#verspielt_ernst").val();
     var warm_kalt = $("input#warm_kalt").val();
     var gewöhnlich_individuell = $("input#gewöhnlich_individuell").val();
 
-    $.post(
-      "/surveys?" +
-        $.param({
-          uuid: activUser.uuid,
-          zeitgemaess_zeitlos: zeitgemaess_zeitlos,
-          kraftvoll_sanft: kraftvoll_sanft,
-          verspielt_ernst: verspielt_ernst,
-          warm_kalt: warm_kalt,
-          gewöhnlich_individuell: gewöhnlich_individuell,
-          color: activColor,
-        }),
-      function (user) {
-        localStorage.setItem("user", JSON.stringify(user));
-        if (user.level > activUser.level) {
-          window.location.replace("../levelup/level.html");
-        } else {
-          window.location.replace("../game/game.html");
-        }
+    event.preventDefault();
+    sliders.forEach((slider) => {
+      if (slider.value == 50) {
+        alert("Aufüllen!");
+      } else {
+        $.post(
+          "/surveys?" +
+            $.param({
+              uuid: activUser.uuid,
+              zeitgemaess_zeitlos: zeitgemaess_zeitlos,
+              kraftvoll_sanft: kraftvoll_sanft,
+              verspielt_ernst: verspielt_ernst,
+              warm_kalt: warm_kalt,
+              gewöhnlich_individuell: gewöhnlich_individuell,
+              color: activColor,
+            }),
+          function (user) {
+            localStorage.setItem("user", JSON.stringify(user));
+            if (user.level > activUser.level) {
+              window.location.replace("../levelup/level.html");
+            } else {
+              window.location.replace("../game/game.html");
+            }
+          }
+        );
       }
-    );
+    });
   });
 });
-function gofromtoslide(actSlide, nextslide) {
-  var x = document.getElementById(nextslide);
-  if (x.style.display == "none") {
-    x.style.display = "block";
-  } else {
-    x.style.display = "none";
-  }
 
-  var y = document.getElementById(actSlide);
-  if (y.style.display == "block") {
-    y.style.display = "none";
-  } else {
-    y.style.display = "block";
-  }
-}
+// function gofromtoslide(actSlide, nextslide) {
+//   var x = document.getElementById(nextslide);
+//   if (x.style.display == "none") {
+//     x.style.display = "block";
+//   } else {
+//     x.style.display = "none";
+//   }
+
+//   var y = document.getElementById(actSlide);
+//   if (y.style.display == "block") {
+//     y.style.display = "none";
+//   } else {
+//     y.style.display = "block";
+//   }
+// }
