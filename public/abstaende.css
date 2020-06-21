@@ -5,8 +5,8 @@
 .startscreen {
   position: relative;
 }
-.container2 {
-  margin: 50px;
+.umfang {
+  max-width: 1200px;
 }
 /* .parent {
   width: 100%;

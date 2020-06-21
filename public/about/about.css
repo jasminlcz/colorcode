@@ -1,0 +1,12 @@
+.us {
+  box-shadow: -10px -10px 15px #ffffff, 10px 10px 15px #dae1eb;
+  border-radius: 30px;
+  font-family: halyard-micro, sans-serif;
+  color: #ffffff;
+}
+
+h4 {
+  line-height: 1.6;
+  font-weight: 500;
+  font-size: 20px;
+}
