@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="../style.css" />
     <!-- <link rel="stylesheet" href="newuser.css" /> -->
     <link rel="stylesheet" href="../abstaende.css" />
+    <link rel="stylesheet" href="logout.css" />
     <link rel="stylesheet" href="https://use.typekit.net/zvc1tbo.css" />
 
     <script
@@ -74,48 +75,52 @@
     </header>
 
     <main>
-      <div id="slide1" style="display: block;">
-        <div class="container centered">
-          <div class="start">
-            <h1 class="pb-md">
-              Bis zum nächsten mal <span id="username"></span>!
-            </h1>
-            <h5 class="mb-md">
-              Wenn du das Spiel jetzt beendest brauchst du diese ID um deinen
-              Spielstand zu einem späteren Zeitpunk aurufen zu können. <br />
-              Speicher sie dir am besten direkt ab!
-            </h5>
-            <div class="row">
-              <div class="col-md-10 pb-md">
-                <input
-                  id="showuuid"
-                  type="text"
-                  size="30"
-                  class="form-control softui"
-                  placeholder=""
-                  aria-label="Showuuid"
-                  aria-describedby="basic-addon2"
-                />
-              </div>
-              <div class="col-md-2 pb-md">
-                <button class="btn btn-small btn-normal" onclick="myFunction()">
-                  ID kopieren
-                </button>
-              </div>
-            </div>
+      <!-- <div class="row">
+        <div class="bye col-md-3">
+          <img class="goodbye pt-xl" src="undraw.svg" alt="" />
+        </div>
+      </div> -->
 
-            <div class="row pb-md">
-              <div class="col-md-12">
-                <!-- <form id="logout"> -->
-                <button
-                  type="button"
-                  class="btn secondary btn-normal"
-                  onclick="location.href='../index.html';"
-                >
-                  Logout
-                </button>
-                <!-- </form> -->
-              </div>
+      <div class="container centered">
+        <div class="start">
+          <h1 class="pb-md">
+            Bis zum nächsten mal <span id="username"></span>!
+          </h1>
+          <h5 class="mb-md">
+            Wenn du das Spiel jetzt beendest brauchst du diese ID um deinen
+            Spielstand zu einem späteren Zeitpunk aurufen zu können. <br />
+            Speicher sie dir am besten direkt ab!
+          </h5>
+          <div class="row">
+            <div class="col-md-10 pb-md">
+              <input
+                id="showuuid"
+                type="text"
+                size="30"
+                class="form-control softui"
+                placeholder=""
+                aria-label="Showuuid"
+                aria-describedby="basic-addon2"
+              />
+            </div>
+            <div class="col-md-2 pb-md">
+              <button class="btn btn-small btn-normal" onclick="myFunction()">
+                ID kopieren
+              </button>
+            </div>
+          </div>
+
+          <div class="row pb-md">
+            <div class="col-md-12">
+              <!-- <form id="logout"> -->
+              <button
+                type="button"
+                class="btn secondary btn-normal"
+                onclick="location.href='../index.html';"
+              >
+                Logout
+              </button>
+              <!-- </form> -->
             </div>
           </div>
         </div>

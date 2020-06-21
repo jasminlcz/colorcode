@@ -1,3 +1,5 @@
+// const e = require("express");
+
 $(function () {
   const activUser = JSON.parse(localStorage.getItem("user"));
   console.log(activUser);
@@ -45,32 +47,38 @@ $(function () {
     var gewöhnlich_individuell = $("input#gewöhnlich_individuell").val();
 
     event.preventDefault();
+    var alldone = true;
     sliders.forEach((slider) => {
       if (slider.value == 50) {
-        alert("Aufüllen!");
-      } else {
-        $.post(
-          "/surveys?" +
-            $.param({
-              uuid: activUser.uuid,
-              zeitgemaess_zeitlos: zeitgemaess_zeitlos,
-              kraftvoll_sanft: kraftvoll_sanft,
-              verspielt_ernst: verspielt_ernst,
-              warm_kalt: warm_kalt,
-              gewöhnlich_individuell: gewöhnlich_individuell,
-              color: activColor,
-            }),
-          function (user) {
-            localStorage.setItem("user", JSON.stringify(user));
-            if (user.level > activUser.level) {
-              window.location.replace("../levelup/level.html");
-            } else {
-              window.location.replace("../game/game.html");
-            }
-          }
-        );
+        alldone = false;
       }
     });
+    if (alldone) {
+      $.post(
+        "/surveys?" +
+          $.param({
+            uuid: activUser.uuid,
+            zeitgemaess_zeitlos: zeitgemaess_zeitlos,
+            kraftvoll_sanft: kraftvoll_sanft,
+            verspielt_ernst: verspielt_ernst,
+            warm_kalt: warm_kalt,
+            gewöhnlich_individuell: gewöhnlich_individuell,
+            color: activColor,
+          }),
+        function (user) {
+          localStorage.setItem("user", JSON.stringify(user));
+          if (user.level > activUser.level) {
+            window.location.replace("../levelup/level.html");
+          } else {
+            window.location.replace("../game/game.html");
+          }
+        }
+      );
+    } else {
+      alert(
+        "Neutalität funktionier hier nicht! Du hast doch bestimmt eine Meinung ;) "
+      );
+    }
   });
 });
 
