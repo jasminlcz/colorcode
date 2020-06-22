@@ -46,9 +46,10 @@
     cursor: pointer;
   } */
 .level {
+  width: 180px;
   position: absolute;
-  left: 2%;
-  top: 85%;
+  left: 88%;
+  top: 4%;
 }
 .softui {
   font-family: halyard-micro, sans-serif;
@@ -59,4 +60,14 @@
   border: none;
 
   box-shadow: inset -5px -5px 8px #ffffff, inset 4px 4px 20px #cfcfcf;
+}
+@media screen and (max-width: 768px) {
+  .level {
+    display: none;
+  }
+  h5 {
+    line-height: 1.6;
+    font-weight: 400;
+    font-size: 12px;
+  }
 }
