@@ -28,11 +28,11 @@ $(function () {
       if (slider.value < 50) {
         s.textContent = `#${slider.id}::-webkit-slider-thumb{border: ${
           slider.value / 3
-        }px solid #eeeeee; background-color: ${activColor}}`;
+        }px solid #f1f2f7; background-color: ${activColor}}`;
       } else if (slider.value > 50) {
         s.textContent = `#${slider.id}::-webkit-slider-thumb{border: ${
           (100 - slider.value) / 3
-        }px solid #eeeeee; background-color: ${activColor}}`;
+        }px solid #f1f2f7; background-color: ${activColor}}`;
       } else {
         s.textContent = `#${slider.id}::-webkit-slider-thumb{border: none; background-color: #eeeeee}`;
       }

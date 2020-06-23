@@ -9,6 +9,7 @@
   border-radius: 50%;
 }
 .rankingbody {
+  background-color: #f1f2f7;
   box-shadow: -10px -10px 15px #ffffff, 10px 10px 15px #dae1eb;
   border-radius: 30px;
   font-family: halyard-micro, sans-serif;

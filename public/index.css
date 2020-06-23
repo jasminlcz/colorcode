@@ -88,7 +88,7 @@
   #rect1 {
     position: absolute;
     width: 130px;
-    height: 80px;
+    height: 100px;
     left: -56px;
     top: 10%;
 
@@ -101,9 +101,9 @@
   #rect2 {
     position: absolute;
     width: 83px;
-    height: 307px;
+    height: 207px;
     left: -48px;
-    top: 40%;
+    top: 60%;
 
     background: #2bcadc;
     border: 12px solid #eeeeee;
