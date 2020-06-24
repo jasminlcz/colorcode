@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="../style.css" />
     <link rel="stylesheet" href="../abstaende.css" />
     <link rel="stylesheet" href="../index.css" />
+    <link rel="stylesheet" href="../font.css" />
     <link rel="stylesheet" href="rangliste.css" />
     <link rel="stylesheet" href="https://use.typekit.net/zvc1tbo.css" />
     <script
@@ -38,16 +39,18 @@
     ></script>
   </head>
   <body>
-    <div id="rect1"></div>
+    <!-- <div id="rect1"></div>
     <div id="rect2"></div>
     <div id="rect3"></div>
     <div id="rect4"></div>
     <div id="rect5"></div>
     <div id="rect6"></div>
-    <div id="rect7"></div>
+    <div id="rect7"></div> -->
     <header>
-      <nav class="navbar navbar-expand-lg navbar-light">
-        <a class="navbar-brand" href="../index.html"><img src="/static/logo.png" width="160" alt="ColorCode"></a>
+      <nav class="box mx-auto navbar navbar-expand-lg navbar-light">
+        <a class="navbar-brand" href="../index.html"
+          ><img src="/static/logo.png" width="110" alt="ColorCode"
+        /></a>
         <button
           class="navbar-toggler"
           type="button"
@@ -81,19 +84,25 @@
     </header>
 
     <main>
-      <h1 class="mt-xl">Top 100 Rangliste</h1>
-      <div class="container rankingbody mt-xl">
-        <table class="table">
-          <thead>
-            <tr>
-              <th scope="col">Platz</th>
-              <th scope="col">Spieler</th>
-              <th scope="col">Lieblingsfarbe</th>
-              <th scope="col">Punkte</th>
-            </tr>
-          </thead>
-          <tbody id="rankingbody"></tbody>
-        </table>
+      <div class="boxInner mx-auto">
+        <h1 class="alignLeft mt-xl">Top 10 Rangliste</h1>
+        <h4 class="alignLeft mt-md">
+          <span style="color: #a13356; font-weight: 700;" id="username"></span>
+          du hast aktuell <span id="activpoints"></span> Punkte
+        </h4>
+        <div class="mx-auto rankingbody mt-xl">
+          <table class="table">
+            <thead>
+              <tr>
+                <th scope="col" class="pt-md">Platz</th>
+                <th scope="col" class="pt-md">Spieler</th>
+                <th scope="col" class="pt-md">Lieblingsfarbe</th>
+                <th scope="col" class="pt-md">Punkte</th>
+              </tr>
+            </thead>
+            <tbody id="rankingbody"></tbody>
+          </table>
+        </div>
       </div>
     </main>
 

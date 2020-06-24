@@ -3,16 +3,10 @@
   border-radius: 30px;
   font-family: halyard-micro, sans-serif;
   color: #ffffff;
+  text-align: center;
 }
 
-h4 {
-  line-height: 1.6;
-  font-weight: 500;
-  font-size: 20px;
-}
-
-
-p {
-  font-weight: 400;
-  font-size: 14px;
+.image {
+  height: auto;
+  width: 100%;
 }

@@ -2,10 +2,10 @@
   position: absolute;
   width: 180px;
   height: 120px;
-  left: -56px;
+  left: 80%;
   top: 20%;
 
-  background: #70c1b3;
+  background: #d23c56;
   border: 12px solid #eeeeee;
   box-shadow: 8px 8px 20px #d3d3d3, -8px -8px 20px #ffffff;
   border-radius: 51.5px;
@@ -15,10 +15,10 @@
   position: absolute;
   width: 103px;
   height: 327px;
-  left: -38px;
+  left: 80%;
   top: 40%;
 
-  background: #2bcadc;
+  background: #bf3956;
   border: 12px solid #eeeeee;
   box-shadow: 8px 8px 20px #d3d3d3, -8px -8px 20px #ffffff;
   border-radius: 51.5px;
@@ -27,10 +27,10 @@
   position: absolute;
   width: 77px;
   height: 77px;
-  left: 140px;
+  left: 70%;
   top: 60%;
 
-  background: #63a1cf;
+  background: #a13356;
   border: 12px solid #eeeeee;
   box-shadow: 8px 8px 20px #d3d3d3, -8px -8px 20px #ffffff;
   border-radius: 51.5px;
@@ -39,10 +39,10 @@
   position: absolute;
   width: 162px;
   height: 162px;
-  left: -16px;
+  left: 80%;
   top: 90%;
 
-  background: #fcfdaf;
+  background: #1a1658;
   border: 12px solid #eeeeee;
   box-shadow: 8px 8px 20px #d3d3d3, -8px -8px 20px #ffffff;
   border-radius: 50%;
@@ -54,7 +54,7 @@
   left: 94%;
   top: 40%;
 
-  background: #ff7373;
+  background: #893056;
   border: 12px solid #eeeeee;
   box-shadow: 8px 8px 20px #d3d3d3, -8px -8px 20px #ffffff;
   border-radius: 51.5px;
@@ -66,7 +66,7 @@
   left: 88%;
   top: 70%;
 
-  background: #fbe475;
+  background: #702e55;
   border: 12px solid #eeeeee;
   box-shadow: 8px 8px 20px #d3d3d3, -8px -8px 20px #ffffff;
   border-radius: 51.5px;
@@ -78,16 +78,13 @@
   left: 93%;
   top: 90%;
 
-  background: #2bcadc;
+  background: #41263a;
   border: 12px solid #eeeeee;
   box-shadow: 8px 8px 20px #d3d3d3, -8px -8px 20px #ffffff;
   border-radius: 82px;
 }
 
 @media screen and (max-width: 768px) {
-  button {
-    margin: auto;
-  }
   #rect1 {
     position: absolute;
     width: 130px;
