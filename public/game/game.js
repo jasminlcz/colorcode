@@ -40,11 +40,10 @@ $(function () {
   });
 
   $("form#survey").submit(function (event) {
-    var zeitgemaess_zeitlos = $("input#zeitgemaess_zeitlos").val();
+    var aktuell_zeitlos = $("input#aktuell_zeitlos").val();
     var kraftvoll_sanft = $("input#kraftvoll_sanft").val();
     var verspielt_ernst = $("input#verspielt_ernst").val();
     var warm_kalt = $("input#warm_kalt").val();
-    var gewöhnlich_individuell = $("input#gewöhnlich_individuell").val();
 
     event.preventDefault();
     var alldone = true;
@@ -58,11 +57,10 @@ $(function () {
         "/surveys?" +
           $.param({
             uuid: activUser.uuid,
-            zeitgemaess_zeitlos: zeitgemaess_zeitlos,
+            aktuell_zeitlos: aktuell_zeitlos,
             kraftvoll_sanft: kraftvoll_sanft,
             verspielt_ernst: verspielt_ernst,
             warm_kalt: warm_kalt,
-            gewöhnlich_individuell: gewöhnlich_individuell,
             color: activColor,
           }),
         function (user) {

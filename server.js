@@ -108,11 +108,11 @@ app.post("/surveys", function (request, response) {
   db.get("surveys")
     .push({
       uuid: request.query.uuid,
-      zeitgemaess_zeitlos: request.query.zeitgemaess_zeitlos,
+      aktuell_zeitlos: request.query.aktuell_zeitlos,
       kraftvoll_sanft: request.query.kraftvoll_sanft,
       verspielt_ernst: request.query.verspielt_ernst,
       warm_kalt: request.query.warm_kalt,
-      gewöhnlich_individuell: request.query.gewöhnlich_individuell,
+
       color: request.query.color,
       hsl: chroma(request.query.color).hsl(),
     })
