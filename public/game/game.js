@@ -34,7 +34,7 @@ $(function () {
           (100 - slider.value) / 3
         }px solid #f1f2f7; background-color: ${activColor}}`;
       } else {
-        s.textContent = `#${slider.id}::-webkit-slider-thumb{border: none; background-color: #eeeeee}`;
+        s.textContent = `#${slider.id}::-webkit-slider-thumb{border: none; background-color: #f1f2f7}`;
       }
     });
   });
@@ -76,7 +76,7 @@ $(function () {
       );
     } else {
       alert(
-        "Neutalität funktionier hier nicht! Du hast doch bestimmt eine Meinung ;) "
+        "Hast du nicht was vergessen? Sag uns deine Meinung indem du ALLE Slider verschiebst."
       );
     }
   });

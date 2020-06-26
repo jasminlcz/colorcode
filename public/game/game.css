@@ -30,7 +30,7 @@
   width: 35px;
   height: 35px;
   border-radius: 50%;
-  box-shadow: -4px -4px 10px #ffffff, 4px 4px 7px #dae1eb;
+  box-shadow: -4px -4px 5px #ffffff, 4px 4px 7px #dae1eb;
   cursor: pointer;
   background: #f1f2f7;
 }

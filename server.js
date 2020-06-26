@@ -131,7 +131,7 @@ app.post("/surveys", function (request, response) {
  * get rangliste
  */
 app.get("/ranking", function (request, response) {
-  response.send(db.get("users").sortBy("points").reverse().take(10).value());
+  response.send(db.get("users").sortBy("points").reverse().take(50).value());
 });
 
 // get all surveys - for testing

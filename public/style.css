@@ -42,6 +42,10 @@ body {
   color: rgb(26, 21, 89);
 }
 
+.collapse {
+  background-color: #f1f2f7;
+}
+
 .navbar-light .navbar-nav .active > .nav-link,
 .navbar-light .navbar-nav .nav-link.active,
 .navbar-light .navbar-nav .nav-link.show,
@@ -76,6 +80,7 @@ input.softui {
   color: #ffffff;
 }
 .secondary {
+  box-shadow: -10px -10px 15px #ffffff, 10px 10px 15px #dae1eb;
   height: 50px;
   padding-left: 25px;
   padding-right: 25px;
@@ -104,8 +109,21 @@ input.softui {
 .primary:hover {
   color: #ffffff;
 }
-.btn-normal {
-  box-shadow: -10px -10px 15px #ffffff, 10px 10px 15px #dae1eb;
+.secondary:active {
+  box-shadow: -10px -10px 5px rgb(255, 255, 255, 0.8) inset,
+    10px 10px 10px rgb(187, 195, 204, 0.8) inset;
+
+  user-select: none;
+  transform: translateY(2px);
+}
+
+.primary:active {
+  box-shadow: inset 6px 6px 10px rgb(6, 4, 35, 0.8),
+    inset -8px -8px 5px rgb(71, 65, 151, 0.6);
+  outline: none;
+  border: none;
+  transform: translateY(2px);
+  /* box-shadow: -10px -10px 15px #474197 inset, 10px 10px 15px #060423 inset; */
 }
 
 .btn-normal:active {
