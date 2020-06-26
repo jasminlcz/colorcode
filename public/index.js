@@ -71,3 +71,13 @@ $(function () {
     });
   }
 });
+
+function checklocal() {
+  var user = localStorage.getItem("user");
+  if (user == null) {
+    window.location.replace("../exuser/exuser.html");
+  } else {
+    window.location.replace("../game/game.html");
+  }
+  console.log(user);
+}

@@ -13,9 +13,8 @@
     />
     <link rel="stylesheet" href="../style.css" />
     <link rel="stylesheet" href="../abstaende.css" />
-    <link rel="stylesheet" href="../index.css" />
     <link rel="stylesheet" href="../font.css" />
-    <link rel="stylesheet" href="rangliste.css" />
+    <link rel="stylesheet" href="game.css" />
     <link rel="stylesheet" href="https://use.typekit.net/zvc1tbo.css" />
     <script
       src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
@@ -39,18 +38,12 @@
     ></script>
   </head>
   <body>
-    <!-- <div id="rect1"></div>
-    <div id="rect2"></div>
-    <div id="rect3"></div>
-    <div id="rect4"></div>
-    <div id="rect5"></div>
-    <div id="rect6"></div>
-    <div id="rect7"></div> -->
     <header>
       <nav class="box mx-auto navbar navbar-expand-lg navbar-light">
-        <a class="navbar-brand" href="../index.html"
-          ><img src="/static/logo.png" width="110" alt="ColorCode"
+        <a class="navbar-brand" href="../index.html">
+          <img src="/static/logo.png" width="110" alt="ColorCode"
         /></a>
+
         <button
           class="navbar-toggler"
           type="button"
@@ -65,24 +58,19 @@
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav mr-auto mt-md">
+            <li class="nav-item ">
+                <a class="nav-link mr-sm" href="../index.html"> Das Spiel</a>
+              </li>
+              <li class="nav-item active ">
+                <a class="nav-link mr-sm" href="end.html"> Der Generator</a>
+              </li>
             <li class="nav-item">
-              <a class="nav-link mr-sm" href="../index.html"
-                >Das Spiel<span class="sr-only">(current)</span></a
-              >
-            </li>
-
-            <li class="nav-item">
-              <a class="nav-link mr-sm" href="../end/end.html">
-                Der Generator</a
-              >
-            </li>
-            <li class="nav-item active">
-              <a class="nav-link mr-sm" href="../rangliste/rangliste.css"
+              <a class="nav-link mr-sm" href="../rangliste/rangliste.html"
                 >Rangliste</a
               >
             </li>
             <li class="nav-item">
-              <a class="nav-link mr-sm" href="../about/about.html">Über</a>
+              <a class="nav-link" href="../about/about.html">Über</a>
             </li>
           </ul>
         </div>
@@ -90,44 +78,21 @@
     </header>
 
     <main>
-      <div class="boxInner mx-auto">
-        <h1 class="alignLeft mt-xl">Top 10 Rangliste</h1>
-        <h4 class="alignLeft mt-md">
-          <span style="color: #a13356; font-weight: 700;" id="username"></span>
-          du hast aktuell <span id="activpoints"></span> Punkte
-        </h4>
-        <div class="mx-auto rankingbody mt-xl">
-          <table class="table">
-            <thead>
-              <tr>
-                <th scope="col" class="pt-md">Platz</th>
-                <th scope="col" class="pt-md">Name</th>
-                <th scope="col" class="pt-md">Farbe</th>
-                <th scope="col" class="pt-md">Punkte</th>
-              </tr>
-            </thead>
-            <tbody id="rankingbody"></tbody>
-          </table>
-        </div>
+      <div class="boxInner centered alignCenter">
+        <div>
+            <h1>Hier entseht ein Farbgenerator. </h1>
+          <h4 class="mb-lg">
+            Bis es soweit ist, hilf uns gerne indem du das  <a class="highlight" href="../index.html">ColorCode-Spiel </a> machst.
+          </h4>
+
+          
       </div>
     </main>
 
-    <script
-      src="https://button.glitch.me/button.js"
-      data-style="glitch"
-    ></script>
-    <div
-      class="glitchButton"
-      style="position: fixed; top: 20px; right: 20px;"
-    ></div>
-
-    <!-- Your web-app is https, so your scripts need to be too -->
     <script
       src="https://code.jquery.com/jquery-2.2.1.min.js"
       integrity="sha256-gvQgAFzTH6trSrAWoH1iPo9Xc96QxSZ3feW6kem+O00="
       crossorigin="anonymous"
     ></script>
-    <script src="../game/game.js"></script>
-    <script src="rangliste.js"></script>
   </body>
 </html>

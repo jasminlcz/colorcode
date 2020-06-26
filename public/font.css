@@ -10,11 +10,12 @@
 }
 
 .highlight {
-  color: #a13356;
+  color: #a13356 !important;
 }
 .highlight:hover {
   color: #a13356;
-  text-decoration: underline;
+  text-decoration: underline !important;
+  cursor: pointer;
 }
 
 h1 {
@@ -78,13 +79,13 @@ td {
     color: #1a1559;
     line-height: 1.6;
     font-weight: 700;
-    font-size: 14px;
+    font-size: 12px;
   }
   td {
     color: #1a1559;
     line-height: 1.6;
     font-weight: 400;
-    font-size: 14px;
+    font-size: 12px;
   }
 }
 

@@ -30,7 +30,7 @@ body {
 .navbar {
   font-weight: 400;
   font-size: 16px;
-  color: #1a1559;
+  color: rgb(26, 21, 89);
   height: 100px;
 }
 
@@ -38,8 +38,15 @@ body {
   color: white;
 }
 
-.active {
-  color: #1a1559 !important;
+.navbar-light .navbar-nav .nav-link {
+  color: rgb(26, 21, 89);
+}
+
+.navbar-light .navbar-nav .active > .nav-link,
+.navbar-light .navbar-nav .nav-link.active,
+.navbar-light .navbar-nav .nav-link.show,
+.navbar-light .navbar-nav .show > .nav-link {
+  color: #a13356;
 }
 /* SoftUI Einstellungen*/
 
