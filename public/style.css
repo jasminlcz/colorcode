@@ -112,7 +112,8 @@ body {
 input {
   color: none;
 }
-input.softui {
+.softui {
+  -webkit-appearance: none;
   background: #f1f2f7;
   border-radius: 43px;
   border: none;
@@ -203,7 +204,7 @@ input.softui {
   .secondary {
     font-size: 14px;
   }
-  input.softui {
+  .softui {
     font-size: 14px;
   }
 }
