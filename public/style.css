@@ -13,7 +13,9 @@ body {
 
   background-color: var(--main-bg-color);
 }
-
+button:active {
+  outline: none;
+}
 .start {
   font-family: halyard-micro, sans-serif;
   text-align: center;
@@ -108,7 +110,14 @@ body {
 .navbar-light .navbar-nav .nav-link {
   color: rgb(26, 21, 89);
 }
-
+.navbar-light .navbar-toggler {
+  border: none;
+}
+.navbar-light .navbar-toggler-icon {
+  background-image: url("./static/menu.png");
+  width: 40px;
+  height: 30px;
+}
 /* .collapse {
   background-color: #f1f2f7;
 } */
