@@ -42,7 +42,13 @@ body {
 .c-end {
   margin-top: 25vh;
 }
+.c-about {
+  margin-top: 10vh;
+}
 .c-new {
+  margin-top: 10vh;
+}
+.c-rank {
   margin-top: 10vh;
 }
 
@@ -75,6 +81,12 @@ body {
     margin-top: 5vh;
   }
   .c-end {
+    margin-top: 5vh;
+  }
+  .c-about {
+    margin-top: 5vh;
+  }
+  .c-rank {
     margin-top: 5vh;
   }
 }
