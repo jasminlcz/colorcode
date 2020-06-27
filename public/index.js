@@ -1,7 +1,5 @@
 $(function () {
-  // loadSurveys();
-  /* searchuser('e0862925-405a-4dce-b2a8-a3515df1a88f'); */
-
+  //Spielername
   $("form#userinformation").submit(function (event) {
     event.preventDefault();
     var name = $("input#name").val();
@@ -17,7 +15,7 @@ $(function () {
       }
     );
   });
-
+  //Prüft ob die eingegebene UUID vergeben ist und leitet weiter
   $("form#finduser").submit(function (event) {
     event.preventDefault();
     var uuid = $("input#uuid").val();
@@ -26,6 +24,7 @@ $(function () {
         $.param({
           uuid: uuid,
         }),
+
       function (user) {
         localStorage.setItem("user", JSON.stringify(user));
         window.location.replace("../game/game.html");
@@ -33,45 +32,9 @@ $(function () {
       }
     );
   });
-
-  // function loadSurveys() {
-  //   $.get("/surveys", function (surveys) {
-  //     $("ul#surveys li").remove();
-  //     surveys.forEach(function (survey) {
-  //       $("<li></li>")
-  //         .text(
-  //           survey.name +
-  //             " " +
-  //             survey.uuid +
-  //             " " +
-  //             survey.modern_klassisch +
-  //             " " +
-  //             survey.unterhaltsam_serioes +
-  //             " " +
-  //             survey.answer +
-  //             " " +
-  //             survey.color
-  //         )
-  //         .appendTo("ul#surveys");
-  //     });
-  //   });
-  // }
-
-  function searchuser(uuid) {
-    $.get(
-      "/searchuser?" +
-        $.param({
-          uuid: uuid,
-        }),
-      function (user) {
-        alert(user.name);
-      }
-    ).fail(function () {
-      alert("nicht gefunden");
-    });
-  }
 });
 
+//Sucht ob User im Localhost liegt, wenn ja wird er direkt zum spiel weiter geleitet
 function checklocal() {
   var user = localStorage.getItem("user");
   if (user == null) {

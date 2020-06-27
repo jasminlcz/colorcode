@@ -39,13 +39,6 @@
     ></script>
   </head>
   <body>
-    <!-- <div id="rect1"></div>
-    <div id="rect2"></div>
-    <div id="rect3"></div>
-    <div id="rect4"></div>
-    <div id="rect5"></div>
-    <div id="rect6"></div>
-    <div id="rect7"></div> -->
     <header>
       <nav class="box mx-auto navbar navbar-expand-lg navbar-light">
         <a class="navbar-brand" href="../index.html"
@@ -91,11 +84,9 @@
 
     <main>
       <div class="boxInner mx-auto">
-        <h1 class="alignLeft mt-xl">Top 10 Rangliste</h1>
-        <h4 class="alignLeft mt-md">
-          <span style="color: #a13356; font-weight: 700;" id="username"></span>
-          du hast aktuell <span id="activpoints"></span> Punkte
-        </h4>
+        <h1 class="alignLeft mt-xl">Top 50 Liste</h1>
+        <h4 class="alignLeft mt-md" id="activUserInfo"></h4>
+        <!-- Rangliste-->
         <div class="mx-auto rankingbody mt-xl">
           <table class="table">
             <thead>
@@ -113,21 +104,11 @@
     </main>
 
     <script
-      src="https://button.glitch.me/button.js"
-      data-style="glitch"
-    ></script>
-    <div
-      class="glitchButton"
-      style="position: fixed; top: 20px; right: 20px;"
-    ></div>
-
-    <!-- Your web-app is https, so your scripts need to be too -->
-    <script
       src="https://code.jquery.com/jquery-2.2.1.min.js"
       integrity="sha256-gvQgAFzTH6trSrAWoH1iPo9Xc96QxSZ3feW6kem+O00="
       crossorigin="anonymous"
     ></script>
-    <script src="../game/game.js"></script>
+
     <script src="rangliste.js"></script>
   </body>
 </html>

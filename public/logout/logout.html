@@ -79,16 +79,17 @@
     </header>
 
     <main>
-      <div class="boxInner alignLeft centered">
+      <div class="boxInner alignLeft mx-auto c-logout">
         <div>
           <h1 class="pb-md">
-            Bis zum nächsten mal <span id="username"></span>!
+            Bis zum nächsten mal <span class="highlight" id="username"></span>!
           </h1>
           <h5 class="mb-md">
             Wenn du das Spiel jetzt beendest brauchst du diese ID um deinen
             Spielstand zu einem späteren Zeitpunk aurufen zu können. <br />
             Speicher sie dir am besten direkt ab!
           </h5>
+          <!-- UUID abspeichern  -->
           <div class="row">
             <div class="col-md-9 pb-md">
               <input
@@ -107,25 +108,10 @@
               </button>
             </div>
           </div>
-
-          <!-- <div class="row pb-md">
-            <div class="col-md-12">
-           
-              <button
-                type="button"
-                class="btn secondary btn-normal"
-                onclick="location.href='../index.html';"
-              >
-                Logout
-              </button>
-            
-            </div>
-          </div> -->
         </div>
       </div>
     </main>
 
-    <!-- Your web-app is https, so your scripts need to be too -->
     <script
       src="https://code.jquery.com/jquery-2.2.1.min.js"
       integrity="sha256-gvQgAFzTH6trSrAWoH1iPo9Xc96QxSZ3feW6kem+O00="

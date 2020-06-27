@@ -86,28 +86,28 @@
         <stop offset="100" stop-color="#24c1ed" />
       </linearGradient>
 
-      <div class="boxInner alignCenter centered">
+      <div class="boxInner alignCenter mx-auto c-levelup">
         <div>
-          <h1 class="mb-xl">
+          <h1 class="mb-md">
             Das war super!
           </h1>
-
+          <h4 class="mb-xl">
+            Das ist deine aktuelle Punktzahl
+          </h4>
+          <!-- Animiertes SVG-->
           <svg class="levelUpCircle">
             <filter id="dropshadow" height="130%">
               <feGaussianBlur in="SourceAlpha" stdDeviation="5" />
-              <!-- stdDeviation is how much to blur -->
+
               <feOffset dx="2" dy="2" result="offsetblur" />
 
-              <!-- how much to offset -->
               <feComponentTransfer>
                 <feFuncA type="linear" slope="0.5" />
-                <!-- slope is the opacity of the shadow -->
               </feComponentTransfer>
               <feMerge>
                 <feMergeNode />
-                <!-- this contains the offset blurred image -->
+
                 <feMergeNode in="SourceGraphic" />
-                <!-- this contains the element that the filter is applied to -->
               </feMerge>
             </filter>
 
@@ -122,6 +122,14 @@
               stroke-width="30"
               opacity="0.5"
             />
+
+            <text
+              x="50%"
+              y="50%"
+              dominant-baseline="middle"
+              text-anchor="middle"
+              id="activpoints"
+            ></text>
             <path
               id="progressPath"
               fill="none"
@@ -139,14 +147,8 @@
                 repeatCount="1"
               />
             </path>
-            <!-- punkte -->
-            <h2 class="points">
-              <span id="activpoints"></span>
-              <br />
-              Punkte
-            </h2>
           </svg>
-
+          <!-- Buttons  -->
           <div class="mt-xl">
             <button
               type="button "
@@ -168,8 +170,6 @@
         </div>
       </div>
     </main>
-
-    <!-- Your web-app is https, so your scripts need to be too -->
 
     <script
       src="https://code.jquery.com/jquery-2.2.1.min.js"

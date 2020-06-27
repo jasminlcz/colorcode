@@ -85,7 +85,7 @@
     </header>
 
     <main>
-      <div class="boxInner centered alignCenter">
+      <div class="boxInner c-new mx-auto alignCenter">
         <div>
           <h1 class="pb-md">
             Hallo <span class="highlight" id="username"></span>!
@@ -93,7 +93,7 @@
           <h5 class="pb-md">
             Gleich gehts los! Wähle hier noch deine Lieblingsfarbe.
           </h5>
-
+          <!-- Colorpicker  -->
           <form id="updatefavcolor">
             <div class="row">
               <div class="col-md-12 pb-md">
@@ -109,7 +109,7 @@
                 </div>
               </div>
             </div>
-
+            <!-- Button-->
             <div class="row pb-md">
               <div class="col-md-12">
                 <button type="button submit" class="btn primary">
@@ -122,7 +122,6 @@
       </div>
     </main>
 
-    <!-- Your web-app is https, so your scripts need to be too -->
     <script
       src="https://code.jquery.com/jquery-2.2.1.min.js"
       integrity="sha256-gvQgAFzTH6trSrAWoH1iPo9Xc96QxSZ3feW6kem+O00="
@@ -132,6 +131,7 @@
       type="text/javascript"
       src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"
     ></script>
+    <!-- Colorpicker einbinden mit angular-->
     <script type="text/javascript">
       (function () {
         "use strict";

@@ -1,13 +1,14 @@
-.points {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -110%);
-}
 .levelUpCircle {
   height: 300px;
   width: 300px;
 }
 .circleStyle {
   box-shadow: -10px -10px 15px #ffffff, 10px 10px 15px #dae1eb;
+}
+
+text {
+  line-height: 1.6;
+  font-weight: 500;
+
+  font-size: 30px;
 }

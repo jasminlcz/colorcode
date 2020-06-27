@@ -10,28 +10,83 @@ body {
   font-family: halyard-micro, sans-serif;
   text-align: center;
   color: var(--primary-color);
+
   background-color: var(--main-bg-color);
-  background-size: cover;
 }
 
 .start {
-  position: fixed;
-  top: 30%;
+  font-family: halyard-micro, sans-serif;
+  text-align: center;
+  color: var(--primary-color);
+  background-image: url("Landingpage.png");
+  background-size: cover;
+  background-color: var(--main-bg-color);
 }
-.centered {
-  position: fixed;
-  top: 53%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+
+.c-levelup {
+  margin-top: 10vh;
+}
+.c-start {
+  margin-top: 20vh;
+}
+
+.c-game {
+  margin-top: 12vh;
+}
+.c-logout {
+  margin-top: 25vh;
+}
+.c-ex {
+  margin-top: 25vh;
+}
+.c-new {
+  margin-top: 10vh;
+}
+.centered2 {
+  margin-top: 30vh;
+}
+
+@media screen and (max-width: 768px) {
+  .start {
+    background-image: none;
+
+    background-color: var(--main-bg-color);
+  }
+
+  .c-levelup {
+    margin-top: 5vh;
+  }
+  .c-new {
+    margin-top: 5vh;
+  }
+
+  .c-start {
+    margin-top: 10vh;
+  }
+
+  .c-game {
+    margin-top: 8vh;
+  }
+
+  .c-logout {
+    margin-top: 18vh;
+  }
+  .c-ex {
+    margin-top: 18vh;
+  }
+  .centered2 {
+    margin-top: 30vh;
+  }
 }
 
 /* Navbar Eigenschaften */
 
 .navbar {
+  background-color: #f1f2f7;
   font-weight: 400;
   font-size: 16px;
+  text-align: left;
   color: rgb(26, 21, 89);
-  height: 100px;
 }
 
 .navbar a {
@@ -42,9 +97,9 @@ body {
   color: rgb(26, 21, 89);
 }
 
-.collapse {
+/* .collapse {
   background-color: #f1f2f7;
-}
+} */
 
 .navbar-light .navbar-nav .active > .nav-link,
 .navbar-light .navbar-nav .nav-link.active,
@@ -150,10 +205,5 @@ input.softui {
   }
   input.softui {
     font-size: 14px;
-  }
-
-  .start {
-    position: fixed;
-    top: 20%;
   }
 }

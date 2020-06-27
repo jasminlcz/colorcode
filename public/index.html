@@ -13,7 +13,7 @@
     />
     <link rel="stylesheet" href="/style.css" />
     <link rel="stylesheet" href="/abstaende.css" />
-    <link rel="stylesheet" href="/background.css" />
+   
     <link rel="stylesheet" href="/font.css" />
     <link rel="stylesheet" href="https://use.typekit.net/zvc1tbo.css">
     <script
@@ -38,22 +38,14 @@
     ></script>
 
   </head>
-  <body>
-    <!--Hintergrund Rechtecke-->
-     <div id="rect1" ></div>
-    <div id="rect2" ></div>
-    <div id="rect3" ></div>
-    <div id="rect4" ></div>
-    <div id="rect5" ></div>
-    <div id="rect6" ></div>
-    <div id="rect7" ></div> 
-   
+  <body class="start">
+
     <header>
 
 
 
 
-    <!--Navbar-->
+
       <nav class="box mx-auto navbar navbar-expand-lg navbar-light">
         <a class="navbar-brand" href="index.html"> <img src="static/logo.png" width="110" alt="ColorCode"></a>
         <button
@@ -91,10 +83,10 @@
     </header>
 
     <main>
-      
-        <div class="box alignLeft mx-auto ">
+ 
+        <div class="box alignLeft c-start mx-auto ">
           <div class="row ">
-            <div class="start col-md-7 col-xs-12">
+            <div class="col-md-12 col-lg-7 col-xs-12">
          
             <h1 class="mb-xl">
              Willkommen beim ultimativen <br>  Colorcode-Game
@@ -103,6 +95,7 @@
               Vielen Dank, dass du uns bei unserem Projekt unterstützt. <br>
               Wähle zuerst einen Namen.
             </h4>
+             <!-- Neuer User-->
             <form id="userinformation">
             <div class="row">
               <div class="col-md-6 col-xs-12 pb-md">
@@ -135,6 +128,7 @@
     
           </form>
             <hr>
+             <!-- Weiterspielen-->
             <div class="row">
               <div class="col-md-12 pb-md">
                 <h5 class="pb-md">
@@ -155,7 +149,6 @@
 
    
 
-    <!-- Your web-app is https, so your scripts need to be too -->
     <script
       src="https://code.jquery.com/jquery-2.2.1.min.js"
       integrity="sha256-gvQgAFzTH6trSrAWoH1iPo9Xc96QxSZ3feW6kem+O00="
