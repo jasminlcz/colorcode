@@ -4,9 +4,14 @@
 .boxInner {
   width: 60%;
 }
-
+.boxStart {
+  width: 90%;
+}
 @media screen and (max-width: 768px) {
   .boxInner {
+    width: 85%;
+  }
+  .boxStart {
     width: 85%;
   }
 }

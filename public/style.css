@@ -39,11 +39,11 @@ body {
 .c-ex {
   margin-top: 25vh;
 }
+.c-end {
+  margin-top: 25vh;
+}
 .c-new {
   margin-top: 10vh;
-}
-.centered2 {
-  margin-top: 30vh;
 }
 
 @media screen and (max-width: 768px) {
@@ -61,21 +61,21 @@ body {
   }
 
   .c-start {
-    margin-top: 10vh;
+    margin-top: 5vh;
   }
 
   .c-game {
-    margin-top: 8vh;
+    margin-top: 5vh;
   }
 
   .c-logout {
-    margin-top: 18vh;
+    margin-top: 5vh;
   }
   .c-ex {
-    margin-top: 18vh;
+    margin-top: 5vh;
   }
-  .centered2 {
-    margin-top: 30vh;
+  .c-end {
+    margin-top: 5vh;
   }
 }
 
