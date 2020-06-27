@@ -13,9 +13,9 @@
     />
     <link rel="stylesheet" href="/style.css" />
     <link rel="stylesheet" href="/abstaende.css" />
-   
+
     <link rel="stylesheet" href="/font.css" />
-    <link rel="stylesheet" href="https://use.typekit.net/zvc1tbo.css">
+    <link rel="stylesheet" href="https://use.typekit.net/zvc1tbo.css" />
     <script
       src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
       integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
@@ -36,18 +36,13 @@
       integrity="sha256-KzZiKy0DWYsnwMF+X1DvQngQ2/FxF7MF3Ff72XcpuPs="
       crossorigin="anonymous"
     ></script>
-
   </head>
   <body class="start">
-
     <header>
-
-
-
-
-
       <nav class="box mx-auto navbar navbar-expand-lg navbar-light">
-        <a class="navbar-brand" href="index.html"> <img src="static/logo.png" width="110" alt="ColorCode"></a>
+        <a class="navbar-brand" href="index.html">
+          <img src="static/logo.png" width="110" alt="ColorCode"
+        /></a>
         <button
           class="navbar-toggler"
           type="button"
@@ -60,22 +55,21 @@
           <span class="navbar-toggler-icon"></span>
         </button>
 
-
-        <div class="collapse navbar-collapse " id="navbarSupportedContent">
-          <ul class="navbar-nav mt-md mr-auto ">
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mt-md mr-auto">
             <li class="nav-item active">
               <a class="nav-link mr-sm" href="index.html"> Das Spiel</a>
             </li>
-            <li class="nav-item ">
+            <li class="nav-item">
               <a class="nav-link mr-sm" href="./end/end.html"> Der Generator</a>
             </li>
-            <li class="nav-item ">
-              <a class="nav-link mr-sm" href="./rangliste/rangliste.html"> Rangliste</a>
+            <li class="nav-item">
+              <a class="nav-link mr-sm" href="./rangliste/rangliste.html">
+                Rangliste</a
+              >
             </li>
             <li class="nav-item mr-sm">
-
-              <a class="nav-link " href="./about/about.html">Über</a>
-
+              <a class="nav-link" href="./about/about.html">Über</a>
             </li>
           </ul>
         </div>
@@ -83,79 +77,64 @@
     </header>
 
     <main>
- 
-        <div class="box alignLeft c-start mx-auto ">
-          <div class="row ">
-            <div class="col-md-12 col-lg-7 col-xs-12">
-         
+      <div class="box alignLeft c-start mx-auto">
+        <div class="row">
+          <div class="col-md-12 col-lg-7 col-xs-12">
             <h1 class="mb-xl">
-             Willkommen beim ultimativen <br>  Colorcode-Game
+              Willkommen beim ultimativen <br />
+              Colorcode-Game
             </h1>
             <h4 class="pb-md">
-              Vielen Dank, dass du uns bei unserem Projekt unterstützt. <br>
+              Vielen Dank, dass du uns bei unserem Projekt unterstützt. <br />
               Wähle zuerst einen Namen.
             </h4>
-             <!-- Neuer User-->
+            <!-- Neuer User-->
             <form id="userinformation">
-            <div class="row">
-              <div class="col-md-6 col-xs-12 pb-md">
-                <input
-
-                  id="name"
-                  type="text"
-                  size="30"
-                  class="form-control softui"
-                  placeholder="Spielername"
-                  aria-label="Spielername"
-                  aria-describedby="basic-addon2"
-                  required
-                />
+              <div class="row">
+                <div class="col-md-6 col-xs-12 pb-md">
+                  <input
+                    id="name"
+                    type="text"
+                    size="30"
+                    class="form-control softui"
+                    placeholder="Spielername"
+                    aria-label="Spielername"
+                    aria-describedby="basic-addon2"
+                    required
+                  />
+                </div>
+                <div class="col-md-4 col-xs-12">
+                  <button type="button submit " class="btn primary">
+                    Neues Spiel starten
+                  </button>
+                </div>
+                <div class="col-md-2"></div>
               </div>
-              <div class="col-md-4 col-xs-12">
-                <button
-                  type="button submit "
-                  class="btn primary "  
-                >
-                  Neues Spiel starten
-                </button>
-             
-              </div>
-              <div class="col-md-2">
-     
-              </div>
-            </div>
-            
-    
-          </form>
-            <hr>
-             <!-- Weiterspielen-->
+            </form>
+            <hr />
+            <!-- Weiterspielen-->
             <div class="row">
               <div class="col-md-12 pb-md">
                 <h5 class="pb-md">
-                  Wenn du das Farbenspiel schonmal gespielt hast kannst du es <a class="highlight" onclick="checklocal()" >hier fortsetzen</a> 
+                  Wenn du das Farbenspiel schonmal gespielt hast kannst du es
+                  <a class="highlight" onclick="checklocal()"
+                    >hier fortsetzen</a
+                  >
                 </h5>
+              </div>
             </div>
-
           </div>
-       
-      
+        </div>
       </div>
-      </div>
-    </div>
-
-
-
-   
-
-   
+    </main>
+    <footer style="height: 200px;"></footer>
 
     <script
       src="https://code.jquery.com/jquery-2.2.1.min.js"
       integrity="sha256-gvQgAFzTH6trSrAWoH1iPo9Xc96QxSZ3feW6kem+O00="
       crossorigin="anonymous"
     ></script>
-   
+
     <script src="/index.js"></script>
-    
   </body>
 </html>
