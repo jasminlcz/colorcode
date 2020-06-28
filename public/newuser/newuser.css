@@ -42,3 +42,10 @@ h5 {
   -webkit-filter: drop-shadow(0 5px 15px rgba(0, 0, 0, 0.5));
   filter: drop-shadow(0 5px 15px rgba(0, 0, 0, 0.5));
 }
+
+@media screen and (max-width: 768px) {
+  canvas {
+    width: 250px;
+    height: 250px;
+  }
+}
