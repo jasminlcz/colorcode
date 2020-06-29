@@ -110,6 +110,9 @@ button:active {
 .navbar-light .navbar-nav .nav-link {
   color: rgb(26, 21, 89);
 }
+.navbar-light .navbar-nav .nav-link:hover {
+  color: rgb(26, 21, 89, 0.5);
+}
 .navbar-light .navbar-toggler {
   border: none;
 }

@@ -12,6 +12,9 @@
 .highlight {
   color: #a13356 !important;
 }
+.highlightmuted {
+  color: rgb(161, 51, 86) !important;
+}
 .highlight:hover {
   color: #a13356;
   text-decoration: underline !important;

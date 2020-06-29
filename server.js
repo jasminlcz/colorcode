@@ -146,11 +146,11 @@ app.get("/colors", function (request, response) {
 
 // clear surveys - for testing
 
-app.get("/clear", function (request, response) {
-  db.get("surveys").remove().write();
-  db.get("users").remove().write();
-  response.send("Database cleared");
-});
+// app.get("/clear", function (request, response) {
+//   db.get("surveys").remove().write();
+//   db.get("users").remove().write();
+//   response.send("Database cleared");
+// });
 
 // FUNCTIONS
 
