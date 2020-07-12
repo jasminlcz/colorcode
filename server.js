@@ -15,9 +15,9 @@ app.use(bodyParser.json());
 // It's deliberately placed in the `.data` directory which doesn't get copied if someone remixes the project.
 const low = require("lowdb");
 const FileSync = require("lowdb/adapters/FileSync");
-const adapter = new FileSync(".data/db.json");
+const adapter = new FileSync("data/db.json");
 const db = low(adapter);
-const colordb = low(new FileSync(".data/colordb.json"));
+const colordb = low(new FileSync("data/colordb.json"));
 
 // set default data
 db.defaults({ surveys: [], users: [] }).write();
@@ -142,6 +142,10 @@ app.get("/surveys", function (request, response) {
 //get all colors - for testing
 app.get("/colors", function (request, response) {
   response.json(colordb.get("colors"));
+});
+
+app.get("/users", function (request, response) {
+  response.json(db.get("users"));
 });
 
 // clear surveys - for testing
