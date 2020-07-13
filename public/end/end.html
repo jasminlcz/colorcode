@@ -148,7 +148,38 @@
     </header>
 
     <main>
-      <div class="box mx-auto">
+      <div class="boxInner alignLeft mx-auto c-ex">
+        <div>
+          <h1 class="pb-md">
+            Starte den Farbgenerator
+          </h1>
+          <h4 class="mb-md">
+            Gib hier deine User ID um dir eine Farbe generieren zu lassen.
+          </h4>
+          <form id="finduser">
+            <div class="row">
+              <div class="col-md-9 pb-md">
+                <input
+                  id="uuid"
+                  type="text"
+                  size="30"
+                  class="form-control softui"
+                  placeholder="User ID"
+                  aria-label="Spielername"
+                  aria-describedby="basic-addon2"
+                  required
+                />
+              </div>
+              <div class="col-md-3">
+                <button type="button submit " class="btn primary btn-normal">
+                  Los gehts
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+      <!-- <div class="box mx-auto">
         <h1>Hallo</h1>
         <h4 class="mb-md">
           Gebe hier deinen gespeicherte ID ein um deinen Spielstand zu laden.
@@ -173,7 +204,7 @@
             </div>
           </div>
         </form>
-      </div>
+      </div> -->
     </main>
     <footer style="height: 50px;"></footer>
     <script
