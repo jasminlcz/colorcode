@@ -88,12 +88,23 @@ $(document).ready(() => {
     const h = item.hsl[0];
     const s = item.hsl[1];
     const l = item.hsl[2];
-    // const colorHex = hslToHex(h, s, l)
-    // const colorDecimal = parseInt(colorHex.substr(1), 16)
+
     const rgb = hslToRgb(h, s, l);
     console.log(rgb);
-    // $('#temp').append(`<p style="color: hsl(${h},${s < 1 ? s * 100 : s}%,${l < 1 ? l * 100 : l}%)">B</p><p style="color: rgb(${rgb[0]},${rgb[1]},${rgb[2]})">B</p>`)
+
     const output = rgb;
+    $("#temp").append(
+      `<button type="button submit" style="background: hsl(${h},${
+        s < 1 ? s * 100 : s
+      }%,${
+        l < 1 ? l * 100 : l
+      }%)" class="color-indicator" onclick="setSliderValue('${
+        item.color
+      }')"></button>
+      `
+    );
+
+    //<p>${item.color}</p>
     nn.addData(inputs, output);
   });
 
@@ -111,44 +122,20 @@ $(document).ready(() => {
     console.timeEnd("Training Time");
     trainingFlag = true;
   }
+
+  window.setSliderValue = function (color) {
+    filteredData.forEach((item) => {
+      if (item.color == color) {
+        document.getElementById("aktuell_zeitlos").value = item.aktuell_zeitlos;
+        document.getElementById("kraftvoll_sanft").value = item.kraftvoll_sanft;
+        document.getElementById("verspielt_ernst").value = item.verspielt_ernst;
+        document.getElementById("warm_kalt").value = item.warm_kalt;
+      }
+    });
+
+    document.getElementById("analyse");
+  };
 });
-
-// function hslToHex (h, s, l) {
-//   h /= 360
-//   s /= 100
-//   l /= 100
-//   let r, g, b
-//   if (s === 0) {
-//     r = g = b = l // achromatic
-//   } else {
-//     const hue2rgb = (p, q, t) => {
-//       if (t < 0) t += 1
-//       if (t > 1) t -= 1
-//       if (t < 1 / 6) return p + (q - p) * 6 * t
-//       if (t < 1 / 2) return q
-//       if (t < 2 / 3) return p + (q - p) * (2 / 3 - t) * 6
-//       return p
-//     }
-//     const q = l < 0.5 ? l * (1 + s) : l + s - l * s
-//     const p = 2 * l - q
-//     r = hue2rgb(p, q, h + 1 / 3)
-//     g = hue2rgb(p, q, h)
-//     b = hue2rgb(p, q, h - 1 / 3)
-//   }
-//   const toHex = x => {
-//     const hex = Math.round(x * 255).toString(16)
-//     return hex.length === 1 ? '0' + hex : hex
-//   }
-//   return `#${toHex(r)}${toHex(g)}${toHex(b)}`
-// }
-
-// function hexToRgb(hex) {
-//   var bigint = parseInt(hex, 16)
-//   var r = (bigint >> 16) & 255
-//   var g = (bigint >> 8) & 255
-//   var b = bigint & 255
-//   return r + "," + g + "," + b
-// }
 
 function hslToRgb(h, s, l) {
   // Must be fractions of 1
