@@ -62,7 +62,7 @@ $(document).ready(() => {
 
   const options = {
     task: "regression",
-    debug: true,
+    debug: false,
     layers: [
       {
         type: "dense",
@@ -121,6 +121,13 @@ $(document).ready(() => {
   function finishedTraining() {
     console.timeEnd("Training Time");
     trainingFlag = true;
+    var style = document.createElement("style");
+    style.innerHTML = `
+    #loading-wrapper {
+    display:none;
+    }
+    `;
+    document.head.appendChild(style);
   }
 
   window.setSliderValue = function (color) {
