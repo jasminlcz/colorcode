@@ -155,14 +155,44 @@
     </header>
 
     <main>
-    <div id="loading-wrapper">
-    
+      <div id="loading-wrapper">
         <div id="loading-text">loading...</div>
         <div id="loading-content"></div>
       </div>
       <div class="box mx-auto c-about alignLeft">
-        <div>
-          <h1 class="mb-xl">Dein persönlicher Farb-Generator</h1>
+        <div class="row">
+          <h1 class="mb-xl col-md-8">
+            Dein persönlicher Farb-Generator
+          </h1>
+          <div class="col-md-4">
+            <button
+              class="epoche-indicator"
+              data-toggle="tooltip"
+              data-placement="top"
+              title="Trainiere dein Datenset kurz"
+              id="20"
+            >
+              20
+            </button>
+            <button
+              class="epoche-indicator"
+              data-toggle="tooltip"
+              data-placement="top"
+              title="Trainiere dein Datenset etwas länger"
+              id="50"
+            >
+              50
+            </button>
+            <button
+              class="epoche-indicator"
+              data-toggle="tooltip"
+              data-placement="top"
+              title="Trainiere dein Datenset lange (Achtung! kann den Computer überfordern)"
+              id="100"
+            >
+              100
+            </button>
+          </div>
           <!-- <h4 class="mb-lg">
             Bis es soweit ist, hilf uns gerne indem du das
             <a class="highlight" href="../index.html">Colourcode-Spiel </a>
@@ -260,59 +290,9 @@
           </div>
         </div>
         <div class="row pt-md">
-          <div class="col-md-5">
+          <div class="col-md-12">
             <h4 class="pb-md">Deine gespielten Farben</h4>
             <div id="temp"></div>
-          </div>
-          <div class="col-md-7">
-            <h4 class="pb-md">Wie haben andere diese Farbe bewertet?</h4>
-            <div class="row pb-xs">
-              <div class="col-md-2 col-xs-2">
-                <label for="">aktuell</label>
-              </div>
-              <div class="col-md-8 col-xs-8">
-              
-              </div>
-              <label class="col-md-2 col-xs-2">zeitlos</label>
-            </div>
-
-            <!-- Range Slider 2 -->
-
-            <div class="row pb-xs">
-              <div class="col-md-2 col-xs-2">
-                <label for="">kraftvoll</label>
-              </div>
-              <div class="col-md-8 col-xs-8">
-               
-              </div>
-              <label class="col-md-2 col-xs-2">sanft</label>
-            </div>
-
-            <!-- Range Slider 3 -->
-
-            <div class="row pb-xs">
-              <div class="col-md-2 col-xs-2">
-                <label for="">verspielt</label>
-              </div>
-              <div class="col-md-8 col-xs-8">
-                
-              </div>
-              <label class="col-md-2 col-xs-2">ernst</label>
-            </div>
-
-            <!-- Range Slider 4 -->
-
-            <div class="row pb-xs">
-              <div class="col-md-2 col-xs-2">
-                <label for="">warm</label>
-              </div>
-              <div class="col-md-8 col-xs-8">
-               
-              </div>
-              <label class="col-md-2 col-xs-2">kalt</label>
-            </div>
-          </div>
-            <!-- <div id="temp"></div> -->
           </div>
         </div>
       </div>
@@ -320,6 +300,9 @@
     <footer style="height: 50px;"></footer>
     <script>
       console.log("ml5 version:", ml5.version);
+      $(function () {
+        $('[data-toggle="tooltip"]').tooltip();
+      });
     </script>
 
     <!-- <script src="/end.js"></script> -->
