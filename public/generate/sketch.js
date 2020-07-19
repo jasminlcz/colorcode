@@ -148,6 +148,33 @@ $(document).ready(() => {
 
     document.getElementById("analyse");
   };
+  $("#20").click(() => {
+    $("#loading-wrapper").show();
+    const trainingOptions = {
+      batchSize: 24,
+      epochs: 20,
+    };
+    console.time("Training Time");
+    nn.train(trainingOptions, finishedTraining);
+  });
+  $("#50").click(() => {
+    $("#loading-wrapper").show();
+    const trainingOptions = {
+      batchSize: 24,
+      epochs: 50,
+    };
+    console.time("Training Time");
+    nn.train(trainingOptions, finishedTraining);
+  });
+  $("#100").click(() => {
+    $("#loading-wrapper").show();
+    const trainingOptions = {
+      batchSize: 24,
+      epochs: 100,
+    };
+    console.time("Training Time");
+    nn.train(trainingOptions, finishedTraining);
+  });
 });
 
 function hslToRgb(h, s, l) {
