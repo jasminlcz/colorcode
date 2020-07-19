@@ -127,13 +127,7 @@ $(document).ready(() => {
   function finishedTraining() {
     console.timeEnd("Training Time");
     trainingFlag = true;
-    var style = document.createElement("style");
-    style.innerHTML = `
-    #loading-wrapper {
-    display:none;
-    }
-    `;
-    document.head.appendChild(style);
+    $("#loading-wrapper").hide();
   }
 
   window.setSliderValue = function (color) {

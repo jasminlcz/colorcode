@@ -204,17 +204,48 @@ button.color-indicator:hover {
 }
 button.epoche-indicator {
   background-color: #1a1559;
-  width: 60px;
-  height: 40px;
+  width: 80px;
+  height: 50px;
   border: 8px solid #f1f2f7;
-  border-radius: 20px;
+  border-radius: 30px;
   margin-top: 18px;
+  margin-right: 10px;
   text-align: center;
   color: #fff;
-  font-size: 10px;
+  padding: 5px, 5px, 5px, 5px;
+  font-size: 15px;
   box-shadow: -5px -5px 8px #ffffff, 4px 4px 15px #dae1eb;
 }
 button.epoche-indicator:hover {
   user-select: none;
   transform: translateY(2px);
+}
+.epoche-indicator-info {
+  background-color: #f1f2f7;
+  width: 50px;
+  height: 50px;
+  border: 8px solid #f1f2f7;
+  border-radius: 50%;
+  margin-top: 18px;
+  text-align: center;
+  color: #1a1559;
+  padding: 5px, 5px, 5px, 5px;
+  font-size: 15px;
+  box-shadow: -5px -5px 8px #ffffff, 4px 4px 15px #dae1eb;
+}
+@media screen and (max-width: 768px) {
+  .epoche-indicator-info {
+    margin-top: 20px;
+  }
+  button.epoche-indicator {
+    margin-top: 20px;
+  }
+  #colorrect {
+    border: 12px solid var(--main-bg-color);
+    box-shadow: -10px -10px 15px #ffffff, 10px 10px 15px #dae1eb;
+    border-radius: 20px;
+    height: 230px;
+    width: 330px;
+    /* background-color: cadetblue; */
+  }
 }
