@@ -202,3 +202,19 @@ button.color-indicator:hover {
   text-align: center;
   background-color: #888;
 }
+button.epoche-indicator {
+  background-color: #1a1559;
+  width: 60px;
+  height: 40px;
+  border: 8px solid #f1f2f7;
+  border-radius: 20px;
+  margin-top: 18px;
+  text-align: center;
+  color: #fff;
+  font-size: 10px;
+  box-shadow: -5px -5px 8px #ffffff, 4px 4px 15px #dae1eb;
+}
+button.epoche-indicator:hover {
+  user-select: none;
+  transform: translateY(2px);
+}
