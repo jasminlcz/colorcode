@@ -84,7 +84,7 @@
     <link rel="stylesheet" href="../style.css" />
     <link rel="stylesheet" href="../abstaende.css" />
     <link rel="stylesheet" href="../font.css" />
-    <link rel="stylesheet" href="game.css" />
+    <link rel="stylesheet" href="end.css" />
     <link rel="stylesheet" href="https://use.typekit.net/zvc1tbo.css" />
     <script
       src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
@@ -148,16 +148,63 @@
     </header>
 
     <main>
-      <div class="boxInner mx-auto c-end alignLeft">
+      <div class="boxInner alignLeft mx-auto c-ex">
         <div>
-          <h1>Hier entsteht ein Farbgenerator.</h1>
-          <h4 class="mb-lg">
-            Bis es soweit ist, hilf uns gerne indem du das
-            <a class="highlight" href="../index.html">Colourcode-Spiel </a>
-            machst.
+          <h1 class="pb-md">
+            Starte den Farbgenerator
+          </h1>
+          <h4 class="mb-md">
+            Gib hier deine User ID um dir eine Farbe generieren zu lassen.
           </h4>
+          <form id="finduser">
+            <div class="row">
+              <div class="col-md-9 pb-md">
+                <input
+                  id="uuid"
+                  type="text"
+                  size="30"
+                  class="form-control softui"
+                  placeholder="User ID"
+                  aria-label="Spielername"
+                  aria-describedby="basic-addon2"
+                  required
+                />
+              </div>
+              <div class="col-md-3">
+                <button type="button submit " class="btn primary btn-normal">
+                  Los gehts
+                </button>
+              </div>
+            </div>
+          </form>
         </div>
       </div>
+      <!-- <div class="box mx-auto">
+        <h1>Hallo</h1>
+        <h4 class="mb-md">
+          Gebe hier deinen gespeicherte ID ein um deinen Spielstand zu laden.
+        </h4>
+        <form id="finduser">
+          <div class="row">
+            <div class="col-md-8 pb-md">
+              <input
+                id="uuid"
+                type="text"
+                size="30"
+                class="form-control softui"
+                placeholder="User ID"
+                aria-label="Spielername"
+                aria-describedby="basic-addon2"
+              />
+            </div>
+            <div class="col-md-4">
+              <button type="button submit " class="btn primary btn-normal">
+                Spielstand laden
+              </button>
+            </div>
+          </div>
+        </form>
+      </div> -->
     </main>
     <footer style="height: 50px;"></footer>
     <script
@@ -165,5 +212,6 @@
       integrity="sha256-gvQgAFzTH6trSrAWoH1iPo9Xc96QxSZ3feW6kem+O00="
       crossorigin="anonymous"
     ></script>
+    <script src="filter.js"></script>
   </body>
 </html>

@@ -57,6 +57,20 @@ app.get("/searchuser", function (request, response) {
 });
 
 /**
+ * Check for existing User
+ * @query uuid
+ */
+app.get("/filterforuser", function (request, response) {
+  const uuid = request.query.uuid;
+  var usersurveys = db.get("surveys").filter({ uuid: uuid }).value();
+  if (usersurveys) {
+    response.status(200).send(usersurveys);
+  } else {
+    response.sendStatus(404);
+  }
+});
+
+/**
  * Update Color
  * @query uuid, newfavcolor
  */
