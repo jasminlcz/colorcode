@@ -1,10 +1,80 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>simple-survey-server</title>
+    <title>colour-code</title>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="apple-touch-icon"
+      sizes="57x57"
+      href="../static/favicon/apple-icon-57x57.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="60x60"
+      href="../static/favicon/apple-icon-60x60.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="72x72"
+      href="../static/favicon/apple-icon-72x72.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="76x76"
+      href="../static/favicon/apple-icon-76x76.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="114x114"
+      href="../static/favicon/apple-icon-114x114.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="120x120"
+      href="../static/favicon/apple-icon-120x120.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="144x144"
+      href="../static/favicon/apple-icon-144x144.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="152x152"
+      href="../static/favicon/apple-icon-152x152.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="../static/favicon/apple-icon-180x180.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="192x192"
+      href="../static/favicon/android-icon-192x192.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="../static/favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="96x96"
+      href="../static/favicon/favicon-96x96.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="../static/favicon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="../static/favicon/manifest.json" />
     <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
@@ -14,6 +84,7 @@
     <link rel="stylesheet" href="../style.css" />
     <link rel="stylesheet" href="newuser.css" />
     <link rel="stylesheet" href="../abstaende.css" />
+    <link rel="stylesheet" href="../font.css" />
     <link rel="stylesheet" href="https://use.typekit.net/zvc1tbo.css" />
 
     <script
@@ -38,9 +109,13 @@
     ></script>
   </head>
   <body>
+    <link rel="stylesheet" href="../abstaende.css" />
+    <link rel="stylesheet" href="../index.css" />
     <header>
-      <nav class="navbar navbar-expand-lg navbar-light">
-        <a class="navbar-brand" href="index.php"> Farbenspiel</a>
+      <nav class="box mx-auto navbar navbar-expand-lg navbar-light">
+        <a class="navbar-brand" href="../index.html">
+          <img src="/static/logo3.png" width="110" alt="colourcode"
+        /></a>
         <button
           class="navbar-toggler"
           type="button"
@@ -54,17 +129,25 @@
         </button>
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav mr-auto">
+          <ul class="navbar-nav mr-auto mt-md">
             <li class="nav-item active">
-              <a class="nav-link" href="index.php"
+              <a class="nav-link mr-sm" href="../index.html"
                 >Das Spiel<span class="sr-only">(current)</span></a
               >
             </li>
+
             <li class="nav-item">
-              <a class="nav-link" href="rangliste.html">Rangliste</a>
+              <a class="nav-link mr-sm" href="../end/end.html">
+                Der Generator</a
+              >
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="about.html">Über</a>
+              <a class="nav-link mr-sm" href="../rangliste/rangliste.html"
+                >Rangliste</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../about/about.html">Über</a>
             </li>
           </ul>
         </div>
@@ -72,71 +155,43 @@
     </header>
 
     <main>
-      <div id="slide1" style="display: block;">
-        <div class="container centered">
-          <div class="start">
-            <h2 class="pb-md">
-              Hallo <span style="color: rgb(0, 94, 255);" id="username"></span>!
-            </h2>
-            <h5 class="mb-md">
-              Gleich gehts los! Mit der folgenden ID kannst deinen Fortschritt
-              jederzeit laden und weiterspielen. <br />
-              Speicher sie dir am besten direkt ab.
-            </h5>
-
+      <div class="boxInner c-new mx-auto alignCenter">
+        <div>
+          <h1 class="pb-md">
+            Hallo <span class="highlight" id="username"></span>!
+          </h1>
+          <h5 class="pb-md">
+            Gleich gehts los! Wähle hier noch deine Lieblingsfarbe.
+          </h5>
+          <!-- Colorpicker  -->
+          <form id="updatefavcolor">
             <div class="row">
-              <div class="col-md-10 pb-md">
-                <input
-                  id="showuuid"
-                  type="text"
-                  size="30"
-                  class="form-control softui"
-                  placeholder=""
-                  aria-label="Showuuid"
-                  aria-describedby="basic-addon2"
-                />
+              <div class="col-md-12 pb-md">
+                <div ng-app="app">
+                  <color-picker id="colorcircle" color="foo"></color-picker>
+                  <input
+                    id="newfavcolor"
+                    type="text"
+                    ng-model="foo"
+                    disabled
+                    style="display: none;"
+                  />
+                </div>
               </div>
-              <div class="col-md-2 pb-md">
-                <button class="btn btn-small btn-normal" onclick="myFunction()">
-                  ID kopieren
+            </div>
+            <!-- Button-->
+            <div class="row pb-md">
+              <div class="col-md-12">
+                <button type="button submit" class="btn primary">
+                  Los gehts!
                 </button>
               </div>
             </div>
-            <form id="updatefavcolor">
-              <div class="row">
-                <div class="col-md-12 pb-md">
-                  <h5 class="mb-md">
-                    Wähle als nächstes noch deine Liebslinsgfarbe aus
-                  </h5>
-                  <div ng-app="app">
-                    <color-picker id="colorcircle" color="foo"></color-picker>
-                    <input
-                      id="newfavcolor"
-                      type="text"
-                      ng-model="foo"
-                      disabled
-                      style="display: none;"
-                    />
-                  </div>
-
-                  <!-- <input id="faveColor" type="color" /> -->
-                </div>
-              </div>
-
-              <div class="row pb-md">
-                <div class="col-md-12">
-                  <button type="button submit" class="btn primary btn-normal">
-                    Los gehts!
-                  </button>
-                </div>
-              </div>
-            </form>
-          </div>
+          </form>
         </div>
       </div>
     </main>
-
-    <!-- Your web-app is https, so your scripts need to be too -->
+    <footer style="height: 50px;"></footer>
     <script
       src="https://code.jquery.com/jquery-2.2.1.min.js"
       integrity="sha256-gvQgAFzTH6trSrAWoH1iPo9Xc96QxSZ3feW6kem+O00="
@@ -146,6 +201,7 @@
       type="text/javascript"
       src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"
     ></script>
+    <!-- Colorpicker einbinden mit angular-->
     <script type="text/javascript">
       (function () {
         "use strict";

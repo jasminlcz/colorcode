@@ -1,10 +1,86 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>simple-survey-server</title>
+    <title>colour-code</title>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="apple-touch-icon"
+      sizes="57x57"
+      href="../static/favicon/apple-icon-57x57.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="60x60"
+      href="../static/favicon/apple-icon-60x60.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="72x72"
+      href="../static/favicon/apple-icon-72x72.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="76x76"
+      href="../static/favicon/apple-icon-76x76.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="114x114"
+      href="../static/favicon/apple-icon-114x114.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="120x120"
+      href="../static/favicon/apple-icon-120x120.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="144x144"
+      href="../static/favicon/apple-icon-144x144.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="152x152"
+      href="../static/favicon/apple-icon-152x152.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="../static/favicon/apple-icon-180x180.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="192x192"
+      href="../static/favicon/android-icon-192x192.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="../static/favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="96x96"
+      href="../static/favicon/favicon-96x96.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="../static/favicon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="../static/favicon/manifest.json" />
+    <meta name="msapplication-TileColor" content="#ffffff" />
+    <meta
+      name="msapplication-TileImage"
+      content="./static/favicon/ms-icon-144x144.png"
+    />
+    <meta name="theme-color" content="#ffffff" />
     <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
@@ -13,6 +89,8 @@
     />
     <link rel="stylesheet" href="../style.css" />
     <link rel="stylesheet" href="../abstaende.css" />
+    <link rel="stylesheet" href="../index.css" />
+    <link rel="stylesheet" href="../font.css" />
     <link rel="stylesheet" href="rangliste.css" />
     <link rel="stylesheet" href="https://use.typekit.net/zvc1tbo.css" />
     <script
@@ -38,8 +116,10 @@
   </head>
   <body>
     <header>
-      <nav class="navbar navbar-expand-lg navbar-light">
-        <a class="navbar-brand" href="../index.html">Farbenspiel</a>
+      <nav class="box mx-auto navbar navbar-expand-lg navbar-light">
+        <a class="navbar-brand" href="../index.html"
+          ><img src="/static/logo3.png" width="110" alt="colourcode"
+        /></a>
         <button
           class="navbar-toggler"
           type="button"
@@ -53,19 +133,25 @@
         </button>
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav mr-auto">
+          <ul class="navbar-nav mr-auto mt-md">
             <li class="nav-item">
-              <a class="nav-link" href="../index.html"
+              <a class="nav-link mr-sm" href="../index.html"
                 >Das Spiel<span class="sr-only">(current)</span></a
               >
             </li>
+
+            <li class="nav-item">
+              <a class="nav-link mr-sm" href="../end/end.html">
+                Der Generator</a
+              >
+            </li>
             <li class="nav-item active">
-              <a class="nav-link" href="../rangliste/rangliste.css"
+              <a class="nav-link mr-sm" href="../rangliste/rangliste.css"
                 >Rangliste</a
               >
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="../about/about.html">Über</a>
+              <a class="nav-link mr-sm" href="../about/about.html">Über</a>
             </li>
           </ul>
         </div>
@@ -73,47 +159,32 @@
     </header>
 
     <main>
-      <div class="container card centered">
-        <table class="table">
-          <thead>
-            <tr>
-              <th scope="col">#</th>
-              <th scope="col">Spieler</th>
-              <th scope="col">Lieblingsfarbe</th>
-              <th scope="col">Level</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <th scope="row">1</th>
-              <td>Jazzer</td>
-              <td class="colorRect">
-                <div
-                  id="rechteck"
-                  style="height: 20px; width: 20px; background-color: #00ffd0;"
-                ></div>
-              </td>
-              <td>200</td>
-            </tr>
-          </tbody>
-        </table>
+      <div class="boxInner c-rank mx-auto">
+        <h1 class="alignLeft">Top 50 Liste</h1>
+        <h4 class="alignLeft mt-md" id="activUserInfo"></h4>
+        <!-- Rangliste-->
+        <div class="mx-auto rankingbody mt-xl">
+          <table class="table">
+            <thead>
+              <tr>
+                <th scope="col" class="pt-md">Platz</th>
+                <th scope="col" class="pt-md">Name</th>
+                <th scope="col" class="pt-md">Farbe</th>
+                <th scope="col" class="pt-md">Punkte</th>
+              </tr>
+            </thead>
+            <tbody id="rankingbody"></tbody>
+          </table>
+        </div>
       </div>
     </main>
-
-    <script
-      src="https://button.glitch.me/button.js"
-      data-style="glitch"
-    ></script>
-    <div
-      class="glitchButton"
-      style="position: fixed; top: 20px; right: 20px;"
-    ></div>
-
-    <!-- Your web-app is https, so your scripts need to be too -->
+    <footer style="height: 50px;"></footer>
     <script
       src="https://code.jquery.com/jquery-2.2.1.min.js"
       integrity="sha256-gvQgAFzTH6trSrAWoH1iPo9Xc96QxSZ3feW6kem+O00="
       crossorigin="anonymous"
     ></script>
+
+    <script src="rangliste.js"></script>
   </body>
 </html>

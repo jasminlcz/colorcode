@@ -3,3 +3,19 @@
   justify-content: center;
   align-items: center;
 }
+#rechteck {
+  border: 3px solid #eeeeee;
+  box-shadow: 8px 8px 20px #d3d3d3, -8px -8px 20px #ffffff;
+  border-radius: 50%;
+}
+.rankingbody {
+  background-color: #f1f2f7;
+  box-shadow: -10px -10px 15px #ffffff, 10px 10px 15px #dae1eb;
+  border-radius: 30px;
+  font-family: halyard-micro, sans-serif;
+  color: #ffffff;
+}
+
+thead tr th {
+  border-top: none !important;
+}

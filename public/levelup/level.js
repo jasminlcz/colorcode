@@ -1,6 +1,6 @@
 const activUser = JSON.parse(localStorage.getItem("user"));
 const progressPath = document.getElementById("progressPath");
-
+//Berechnet die Animation des Levelup SVG
 progressPath.setAttribute("d", describeArc(150, 150, 130, 0, 359)); //radius,
 progressPath.setAttribute("stroke", activUser.favColor); //radius,
 

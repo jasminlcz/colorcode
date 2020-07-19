@@ -1,10 +1,80 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>simple-survey-server</title>
+    <title>colour-code</title>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="apple-touch-icon"
+      sizes="57x57"
+      href="../static/favicon/apple-icon-57x57.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="60x60"
+      href="../static/favicon/apple-icon-60x60.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="72x72"
+      href="../static/favicon/apple-icon-72x72.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="76x76"
+      href="../static/favicon/apple-icon-76x76.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="114x114"
+      href="../static/favicon/apple-icon-114x114.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="120x120"
+      href="../static/favicon/apple-icon-120x120.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="144x144"
+      href="../static/favicon/apple-icon-144x144.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="152x152"
+      href="../static/favicon/apple-icon-152x152.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="../static/favicon/apple-icon-180x180.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="192x192"
+      href="../static/favicon/android-icon-192x192.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="../static/favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="96x96"
+      href="../static/favicon/favicon-96x96.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="../static/favicon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="../static/favicon/manifest.json" />
     <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
@@ -13,7 +83,10 @@
     />
     <link rel="stylesheet" href="../style.css" />
     <link rel="stylesheet" href="../abstaende.css" />
-    <link rel="stylesheet" href="https://use.typekit.net/zvc1tbo.css">
+    <link rel="stylesheet" href="../index.css" />
+    <link rel="stylesheet" href="../font.css" />
+    <link rel="stylesheet" href="about.css" />
+    <link rel="stylesheet" href="https://use.typekit.net/zvc1tbo.css" />
     <script
       src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
       integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
@@ -37,70 +110,148 @@
   </head>
   <body>
     <header>
-      <!-- <h1>
-        Simple Survey Example
-      </h1> -->
-      <div>
-        <nav class="navbar navbar-expand-lg navbar-light">
-          <a class="navbar-brand" href="../index.html">Farbenspiel</a>
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-toggle="collapse"
-            data-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
-    
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mr-auto">
-              <li class="nav-item ">
-                <a class="nav-link" href="../index.html"
-                  >Das Spiel<span class="sr-only">(current)</span></a
-                >
-              </li>
-              <li class="nav-item ">
-                <a class="nav-link" href="../rangliste/rangliste.css">Rangliste</a>
-              </li>
-              <li class="nav-item active">
-                <a class="nav-link" href="about.html">Über</a>
-              </li>
-              
-              
-              
-            </ul>
-           
-          </div>
-        </nav>
+      <nav class="box mx-auto navbar navbar-expand-lg navbar-light">
+        <a class="navbar-brand" href="../index.html">
+          <img src="../static/logo3.png" width="110" alt="colourcode"
+        /></a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto mt-md">
+            <li class="nav-item">
+              <a class="nav-link mr-sm" href="../index.html"> Das Spiel</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link mr-sm" href="../end/end.html">
+                Der Generator</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link mr-sm" href="../rangliste/rangliste.html"
+                >Rangliste</a
+              >
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="about.html">Über</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
     </header>
 
-    <main >
-     
-      
-     
+    <main>
+      <div class="boxInner mx-auto c-about alignLeft">
+        <h1 class="">Was ist Colourcode?</h1>
+        <div class="row pt-md mb-md">
+          <div class="col-md-12 pt-md">
+            <h5>
+              Die Feuerwehr ist rot, Banken sind blau, Bio ist grün. Farbcodes
+              begegnen uns im Alltag immerzu. Wir sind umgeben von Produkten,
+              deren Farben bewusst gewählt wurden. <br />
+              <br />
+              Designer stellen sich oft die Frage: <br />
+              <strong>
+                Wie muss eine Farbe aussehen, sodass sie eine ganz bestimmte
+                Wirkung hat?
+              </strong>
+              <br />
+              <br />
+              Die Antwort hierfür wollen wir* mithilfe von Machine Learning
+              finden. Dabei wird ein neuronales Netz mit einem großen Datenset
+              trainiert, um am Ende ein Muster daraus abzuleiten. Um das zu
+              erreichen, brauchen wir deine Hilfe! <br />
+
+              Es geht darum, einzelnen Farben Adjektive zuzuordnen, indem du die
+              Regler auf die für dich passende Position verschiebst. Auf diese
+              Weise nimmst du direkten Einfluss darauf, wie die Maschine
+              trainiert wird, also gib alles! <br /><br />
+              <strong>Ein Richtig oder Falsch gibt es nicht!</strong>
+              <br /><br />
+              Wie du die Farben zuordnest, ist ganz dir überlassen. Für jede
+              zugeordnete Farbe gibt es Punkte, die sich mit jedem Level
+              steigern. Ziel ist es, möglichst viele Punkte zu ergattern, um auf
+              der Bestenliste ganz oben zu landen.
+              <strong>Wirst du unser Color-König? </strong> <br />
+            </h5>
+          </div>
+
+          <div class="col-md-12 col-xs-12 mt-xl mb-md">
+            <img class="col-md-12 sliderbox" src="slider2.gif" alt="" />
+          </div>
+        </div>
+
+        <div class="row pt-md">
+          <div class="col-md-12">
+            <h1 class="mt-xl pb-md">Wer steckt hinter dem Spiel?</h1>
+            <h5>
+              *Wir, das sind Xinlei, Jasmin und Elli. Wir studieren
+              Interaktionsgestaltung an der
+              <a class="highlight" href="https://www.hfg-gmuend.de"
+                >Hochschule für Gestaltung</a
+              >
+              in Schwäbisch Gmünd. Im Rahmen eines Projektes beschäftigen wir
+              uns mit Machine Learning. <br /><br />
+              <strong
+                >Danke, dass du uns bei unserem Projekt unterstützt!
+              </strong>
+              <br />
+            </h5>
+          </div>
+          <figure class="figure col-md-4 mt-xl">
+            <img src="xinlei.jpg" class="figure-img img-fluid" alt="..." />
+            <figcaption style="color: #1a1559;" class="figure-caption">
+              Xinlei Qi <br />
+              Lieblingsfarbe:
+              <span style="color: #6c8b7b;">
+                <strong>Olivgrün</strong>
+              </span>
+            </figcaption>
+          </figure>
+
+          <figure class="figure col-md-4 mt-xl">
+            <img src="j.jpg" class="figure-img img-fluid" alt="..." />
+            <figcaption style="color: #1a1559;" class="figure-caption">
+              Jasmin Cziborra <br />
+              Lieblingsfarbe :
+
+              <span style="color: #fec562;">
+                <strong>Orange</strong>
+              </span>
+            </figcaption>
+          </figure>
+
+          <figure class="figure col-md-4 mt-xl">
+            <img src="elli.jpg" class="figure-img img-fluid" alt="..." />
+            <figcaption style="color: #1a1559;" class="figure-caption">
+              Elisabeth Scheer <br />
+              Lieblinsgfarbe:
+              <span style="color: #64bfbf;"> <strong>Hellblau</strong> </span>
+            </figcaption>
+          </figure>
+        </div>
+      </div>
     </main>
+    <footer class="footer boxInner mx-auto alignLeft py-5 mt-auto">
+      <div>
+        <a class="highlightmuted" href="../static/impressum.html">impressum</a>
+      </div>
+    </footer>
 
-    <script
-      src="https://button.glitch.me/button.js"
-      data-style="glitch"
-    ></script>
-    <div
-      class="glitchButton"
-      style="position: fixed; top: 20px; right: 20px;"
-    ></div>
-
-    <!-- Your web-app is https, so your scripts need to be too -->
     <script
       src="https://code.jquery.com/jquery-2.2.1.min.js"
       integrity="sha256-gvQgAFzTH6trSrAWoH1iPo9Xc96QxSZ3feW6kem+O00="
       crossorigin="anonymous"
-
-      
     ></script>
     <script src="../index.js"></script>
   </body>
 </html>
-

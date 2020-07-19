@@ -1,10 +1,80 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>simple-survey-server</title>
+    <title>colour-code</title>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="apple-touch-icon"
+      sizes="57x57"
+      href="../static/favicon/apple-icon-57x57.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="60x60"
+      href="../static/favicon/apple-icon-60x60.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="72x72"
+      href="../static/favicon/apple-icon-72x72.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="76x76"
+      href="../static/favicon/apple-icon-76x76.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="114x114"
+      href="../static/favicon/apple-icon-114x114.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="120x120"
+      href="../static/favicon/apple-icon-120x120.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="144x144"
+      href="../static/favicon/apple-icon-144x144.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="152x152"
+      href="../static/favicon/apple-icon-152x152.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="../static/favicon/apple-icon-180x180.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="192x192"
+      href="../static/favicon/android-icon-192x192.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="../static/favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="96x96"
+      href="../static/favicon/favicon-96x96.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="../static/favicon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="../static/favicon/manifest.json" />
     <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
@@ -13,6 +83,7 @@
     />
     <link rel="stylesheet" href="../style.css" />
     <link rel="stylesheet" href="../abstaende.css" />
+    <link rel="stylesheet" href="../font.css" />
     <link rel="stylesheet" href="level.css" />
     <link rel="stylesheet" href="https://use.typekit.net/zvc1tbo.css" />
     <script
@@ -39,16 +110,11 @@
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
   </head>
   <body>
-    <div id="rect1"></div>
-    <div id="rect2"></div>
-    <div id="rect3"></div>
-    <div id="rect4"></div>
-    <div id="rect5"></div>
-    <div id="rect6"></div>
-    <div id="rect7"></div>
     <header>
-      <nav class="navbar navbar-expand-lg navbar-light">
-        <a class="navbar-brand" href="../index.html"> Farbenspiel</a>
+      <nav class="box mx-auto navbar navbar-expand-lg navbar-light">
+        <a class="navbar-brand" href="../index.html">
+          <img src="/static/logo3.png" width="110" alt="colourcode"
+        /></a>
         <button
           class="navbar-toggler"
           type="button"
@@ -62,14 +128,17 @@
         </button>
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav mr-auto">
+          <ul class="navbar-nav mr-auto mt-md">
             <li class="nav-item active">
-              <a class="nav-link" href="../index.html"
-                >Das Spiel<span class="sr-only">(current)</span></a
+              <a class="nav-link mr-sm" href="../index.html"> Das Spiel</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link mr-sm" href="../end/end.html">
+                Der Generator</a
               >
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="../rangliste/rangliste.html"
+              <a class="nav-link mr-sm" href="../rangliste/rangliste.html"
                 >Rangliste</a
               >
             </li>
@@ -86,89 +155,93 @@
         <stop offset="0" stop-color="#00d5bd" />
         <stop offset="100" stop-color="#24c1ed" />
       </linearGradient>
-      <div id="slide1" style="display: block;">
-        <div class="container centered">
-          <div class="start">
-            <h1 class="mb-xl">
-              Das war super!
-            </h1>
 
-            <svg class="levelUpCircle">
-              <filter id="dropshadow" height="130%">
-                <feGaussianBlur in="SourceAlpha" stdDeviation="5" />
-                <!-- stdDeviation is how much to blur -->
-                <feOffset dx="2" dy="2" result="offsetblur" />
+      <div class="boxInner alignCenter mx-auto c-levelup">
+        <div>
+          <h1 class="mb-md">
+            Das war super!
+          </h1>
+          <h4 class="mb-xl">
+            Das ist deine aktuelle Punktzahl
+          </h4>
+          <!-- Animiertes SVG-->
+          <svg class="levelUpCircle">
+            <filter id="dropshadow" height="130%">
+              <feGaussianBlur in="SourceAlpha" stdDeviation="5" />
 
-                <!-- how much to offset -->
-                <feComponentTransfer>
-                  <feFuncA type="linear" slope="0.5" />
-                  <!-- slope is the opacity of the shadow -->
-                </feComponentTransfer>
-                <feMerge>
-                  <feMergeNode />
-                  <!-- this contains the offset blurred image -->
-                  <feMergeNode in="SourceGraphic" />
-                  <!-- this contains the element that the filter is applied to -->
-                </feMerge>
-              </filter>
+              <feOffset dx="2" dy="2" result="offsetblur" />
 
-              <circle
-                style="filter: url(#dropshadow);"
-                class="circleStyle"
-                cx="150"
-                cy="150"
-                r="130"
-                stroke="#f1f2f7"
-                fill="none"
-                stroke-width="30"
-                opacity="0.5"
+              <feComponentTransfer>
+                <feFuncA type="linear" slope="0.5" />
+              </feComponentTransfer>
+              <feMerge>
+                <feMergeNode />
+
+                <feMergeNode in="SourceGraphic" />
+              </feMerge>
+            </filter>
+
+            <circle
+              style="filter: url(#dropshadow);"
+              class="circleStyle"
+              cx="150"
+              cy="150"
+              r="130"
+              stroke="#f1f2f7"
+              fill="none"
+              stroke-width="30"
+              opacity="0.5"
+            />
+
+            <text
+              x="50%"
+              y="50%"
+              dominant-baseline="middle"
+              text-anchor="middle"
+              id="activpoints"
+              fill="#1a1559"
+            ></text>
+            <path
+              id="progressPath"
+              fill="none"
+              stroke-width="20"
+              stroke-linecap="round"
+              stroke-dasharray="993 993"
+            >
+              <animate
+                attributeName="stroke-dashoffset"
+                from="993"
+                to="0"
+                begin="0s"
+                dur="2s"
+                fill="freeze"
+                repeatCount="1"
               />
-              <path
-                id="progressPath"
-                fill="none"
-                stroke-width="20"
-                stroke-linecap="round"
-                stroke-dasharray="993 993"
-              >
-                <animate
-                  attributeName="stroke-dashoffset"
-                  from="993"
-                  to="0"
-                  begin="0s"
-                  dur="2s"
-                  fill="freeze"
-                  repeatCount="1"
-                />
-              </path>
-              <!-- punkte -->
-              <h1 class="points">
-                <span id="activpoints"></span>
-                <br />
-                Punkte
-              </h1>
-            </svg>
-
-            <div class="mt-xl">
-              <button
-                type="button "
-                class="btn primary btn-normal"
-                onclick="location.href='../game/game.html';"
-              >
-                Weiter mit Level <span id="activlevel"></span>
-              </button>
-            </div>
-            <div class="mt-md">
-              <button type="button" class="btn secondary btn-normal">
-                Ruhm und Ehre ist nichts für mich. Ich bin raus
-              </button>
-            </div>
+            </path>
+          </svg>
+          <!-- Buttons  -->
+          <div class="mt-xl">
+            <button
+              type="button "
+              class="btn primary"
+              onclick="location.href='../game/game.html';"
+            >
+              Weiter mit Level <span id="activlevel"></span>
+            </button>
+          </div>
+          <div class="mt-md">
+            <button
+              type="button"
+              class="btn secondary"
+              onclick="location.href='../logout/logout.html';"
+            >
+              Ruhm und Ehre sind nichts für mich. Ich bin raus.
+            </button>
           </div>
         </div>
       </div>
     </main>
-
-    <!-- Your web-app is https, so your scripts need to be too -->
-
+    <footer style="height: 50px;"></footer>
     <script
       src="https://code.jquery.com/jquery-2.2.1.min.js"
       integrity="sha256-gvQgAFzTH6trSrAWoH1iPo9Xc96QxSZ3feW6kem+O00="
@@ -177,5 +250,6 @@
 
     <script src="../game/game.js"></script>
     <script src="level.js"></script>
+    <script src="confetti.js"></script>
   </body>
 </html>

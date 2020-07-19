@@ -6,6 +6,7 @@ $(function () {
   $("#activlevel").text(activUser.level);
   $("#activpoints").text(activUser.points);
   $("#showuuid").val(activUser.uuid);
+  //Zeigt die Randomcolro aus dem Datenset in dem Colorrect an
   $.get(
     "/randomcolor?" +
       $.param({
@@ -16,70 +17,66 @@ $(function () {
       $("#colorrect").css({ backgroundColor: color.hex });
     }
   );
-
+  //Slider Value berechnung, sodass der Strocke nach außen hin verschwindet
   var sliders = document.querySelectorAll(".slider");
   sliders.forEach((slider) => {
-    let s = document.createElement("style");
+    let s = document.createElement("style"); //css wird kreiert
     document.head.appendChild(s);
     console.log(slider);
     slider.addEventListener("input", () => {
       if (slider.value < 50) {
         s.textContent = `#${slider.id}::-webkit-slider-thumb{border: ${
           slider.value / 3
-        }px solid #eeeeee; background-color: ${activColor}}`;
+        }px solid #f1f2f7; background-color: ${activColor}}`;
       } else if (slider.value > 50) {
         s.textContent = `#${slider.id}::-webkit-slider-thumb{border: ${
           (100 - slider.value) / 3
-        }px solid #eeeeee; background-color: ${activColor}}`;
+        }px solid #f1f2f7; background-color: ${activColor}}`;
       } else {
-        s.textContent = `#${slider.id}::-webkit-slider-thumb{border: none; background-color: #eeeeee}`;
+        s.textContent = `#${slider.id}::-webkit-slider-thumb{border: none; background-color: #f1f2f7}`;
       }
     });
   });
-
+  //Verhindert das man weiter machen kann ohne alle Slider eingestellt zu haben
   $("form#survey").submit(function (event) {
-    event.preventDefault();
-
-    var zeitgemaess_zeitlos = $("input#zeitgemaess_zeitlos").val();
+    var aktuell_zeitlos = $("input#aktuell_zeitlos").val();
     var kraftvoll_sanft = $("input#kraftvoll_sanft").val();
     var verspielt_ernst = $("input#verspielt_ernst").val();
     var warm_kalt = $("input#warm_kalt").val();
-    var gewöhnlich_individuell = $("input#gewöhnlich_individuell").val();
 
-    $.post(
-      "/surveys?" +
-        $.param({
-          uuid: activUser.uuid,
-          zeitgemaess_zeitlos: zeitgemaess_zeitlos,
-          kraftvoll_sanft: kraftvoll_sanft,
-          verspielt_ernst: verspielt_ernst,
-          warm_kalt: warm_kalt,
-          gewöhnlich_individuell: gewöhnlich_individuell,
-          color: activColor,
-        }),
-      function (user) {
-        localStorage.setItem("user", JSON.stringify(user));
-        if (user.level > activUser.level) {
-          window.location.replace("../levelup/level.html");
-        } else {
-          window.location.replace("../game/game.html");
-        }
+    event.preventDefault();
+    var alldone = true;
+    sliders.forEach((slider) => {
+      if (slider.value == 50) {
+        alldone = false;
       }
-    );
+    });
+    //Wenn alle Slider eingestallt sind werden die Informatiuonen in die db eingetragen
+    if (alldone) {
+      $.post(
+        "/surveys?" +
+          $.param({
+            uuid: activUser.uuid,
+            aktuell_zeitlos: aktuell_zeitlos,
+            kraftvoll_sanft: kraftvoll_sanft,
+            verspielt_ernst: verspielt_ernst,
+            warm_kalt: warm_kalt,
+            color: activColor,
+          }),
+        //Wenn alle Slider eingestallt sind wird man weitergeleitet
+        function (user) {
+          localStorage.setItem("user", JSON.stringify(user));
+          if (user.level > activUser.level) {
+            window.location.replace("../levelup/level.html");
+          } else {
+            window.location.replace("../game/game.html");
+          }
+        }
+      );
+    } else {
+      alert(
+        "Hast du nicht was vergessen? Sag uns deine Meinung indem du ALLE Slider verschiebst."
+      );
+    }
   });
 });
-function gofromtoslide(actSlide, nextslide) {
-  var x = document.getElementById(nextslide);
-  if (x.style.display == "none") {
-    x.style.display = "block";
-  } else {
-    x.style.display = "none";
-  }
-
-  var y = document.getElementById(actSlide);
-  if (y.style.display == "block") {
-    y.style.display = "none";
-  } else {
-    y.style.display = "block";
-  }
-}

@@ -10,67 +10,147 @@ body {
   font-family: halyard-micro, sans-serif;
   text-align: center;
   color: var(--primary-color);
+
   background-color: var(--main-bg-color);
+}
+button:active {
+  outline: none;
+}
+.start {
+  font-family: halyard-micro, sans-serif;
+  text-align: center;
+  color: var(--primary-color);
+  background-image: url("Landingpage.png");
   background-size: cover;
-}
-h1 {
-  line-height: 1.5;
-  font-weight: 300;
-  font-size: 40px;
-}
-h4 {
-  line-height: 1.2;
-  font-weight: 500;
-  font-size: 30px;
-}
-h5 {
-  line-height: 1.2;
-  font-weight: 400;
-  font-size: 16px;
+  background-color: var(--main-bg-color);
 }
 
-.start {
-  margin: auto;
+.c-levelup {
+  margin-top: 10vh;
 }
-.centered {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+.c-start {
+  margin-top: 20vh;
+}
+
+.c-game {
+  margin-top: 12vh;
+}
+.c-logout {
+  margin-top: 25vh;
+}
+.c-ex {
+  margin-top: 25vh;
+}
+.c-end {
+  margin-top: 25vh;
+}
+.c-about {
+  margin-top: 10vh;
+}
+.c-new {
+  margin-top: 10vh;
+}
+.c-rank {
+  margin-top: 10vh;
+}
+
+@media screen and (max-width: 768px) {
+  .start {
+    background-image: none;
+
+    background-color: var(--main-bg-color);
+  }
+
+  .c-levelup {
+    margin-top: 5vh;
+  }
+  .c-new {
+    margin-top: 5vh;
+  }
+
+  .c-start {
+    margin-top: 5vh;
+  }
+
+  .c-game {
+    margin-top: 5vh;
+  }
+
+  .c-logout {
+    margin-top: 5vh;
+  }
+  .c-ex {
+    margin-top: 5vh;
+  }
+  .c-end {
+    margin-top: 5vh;
+  }
+  .c-about {
+    margin-top: 5vh;
+  }
+  .c-rank {
+    margin-top: 5vh;
+  }
 }
 
 /* Navbar Eigenschaften */
 
 .navbar {
+  background-color: #f1f2f7;
   font-weight: 400;
   font-size: 16px;
-  color: #1a1559;
-  height: 80px;
+  text-align: left;
+  color: rgb(26, 21, 89);
 }
 
 .navbar a {
   color: white;
 }
 
+.navbar-light .navbar-nav .nav-link {
+  color: rgb(26, 21, 89);
+}
+.navbar-light .navbar-nav .nav-link:hover {
+  color: rgb(26, 21, 89, 0.5);
+}
+.navbar-light .navbar-toggler {
+  border: none;
+}
+.navbar-light .navbar-toggler-icon {
+  background-image: url("./static/menu.png");
+  width: 40px;
+  height: 30px;
+}
+/* .collapse {
+  background-color: #f1f2f7;
+} */
+
+.navbar-light .navbar-nav .active > .nav-link,
+.navbar-light .navbar-nav .nav-link.active,
+.navbar-light .navbar-nav .nav-link.show,
+.navbar-light .navbar-nav .show > .nav-link {
+  color: #a13356;
+}
 /* SoftUI Einstellungen*/
 
 input {
   color: none;
 }
-input.softui {
+.softui {
+  -webkit-appearance: none;
   background: #f1f2f7;
   border-radius: 43px;
   border: none;
   padding-left: 30px;
-  height: 53px;
+  height: 50px;
   box-shadow: inset -5px -5px 8px #ffffff, inset 4px 4px 15px #dae1eb;
 }
 
 .primary {
-  height: 60px;
-  padding-left: 30px;
-  padding-right: 30px;
-  margin: 10px;
+  height: 50px;
+  padding-left: 25px;
+  padding-right: 25px;
+
   background-color: #1a1559;
   border-radius: 50px;
   font-family: halyard-micro, sans-serif;
@@ -80,10 +160,10 @@ input.softui {
   color: #ffffff;
 }
 .secondary {
-  height: 60px;
-  padding-left: 30px;
-  padding-right: 30px;
-  margin: 10px;
+  box-shadow: -10px -10px 15px #ffffff, 10px 10px 15px #dae1eb;
+  height: 50px;
+  padding-left: 25px;
+  padding-right: 25px;
 
   border-radius: 50px;
   font-family: halyard-micro, sans-serif;
@@ -109,8 +189,21 @@ input.softui {
 .primary:hover {
   color: #ffffff;
 }
-.btn-normal {
-  box-shadow: -10px -10px 15px #ffffff, 10px 10px 15px #dae1eb;
+.secondary:active {
+  box-shadow: -10px -10px 5px rgb(255, 255, 255, 0.8) inset,
+    10px 10px 10px rgb(187, 195, 204, 0.8) inset;
+
+  user-select: none;
+  transform: translateY(2px);
+}
+
+.primary:active {
+  box-shadow: inset 6px 6px 10px rgb(6, 4, 35, 0.8),
+    inset -8px -8px 5px rgb(71, 65, 151, 0.6);
+  outline: none;
+  border: none;
+  transform: translateY(2px);
+  /* box-shadow: -10px -10px 15px #474197 inset, 10px 10px 15px #060423 inset; */
 }
 
 .btn-normal:active {
@@ -129,27 +222,13 @@ input.softui {
 /* Mobile Screen Einstellungen */
 
 @media screen and (max-width: 768px) {
-  .card {
-    background: rgb(255, 255, 255);
-    border-radius: 2px;
-    display: inline-block;
-    padding: 30px 30px 30px 30px;
-    height: 400px;
-
-    width: 500px;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+  .primary {
+    font-size: 14px;
   }
-}
-
-@media screen and (min-width: 2000px) {
-  .card {
-    height: 1000px;
-    padding: 60px 60px 60px 60px;
-    width: 1400px;
+  .secondary {
+    font-size: 14px;
   }
-  h4 {
-    line-height: 1.2;
-    font-weight: 300;
-    font-size: 25px;
+  .softui {
+    font-size: 14px;
   }
 }

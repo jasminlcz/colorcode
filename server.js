@@ -1,5 +1,6 @@
 const express = require("express");
 const bodyParser = require("body-parser");
+const chroma = require("chroma-js");
 
 // setup webserver
 const app = express();
@@ -50,6 +51,20 @@ app.get("/searchuser", function (request, response) {
   const user = get_user(uuid);
   if (user) {
     response.status(200).send(user);
+  } else {
+    response.sendStatus(404);
+  }
+});
+
+/**
+ * Check for existing User
+ * @query uuid
+ */
+app.get("/filterforuser", function (request, response) {
+  const uuid = request.query.uuid;
+  var usersurveys = db.get("surveys").filter({ uuid: uuid }).value();
+  if (usersurveys) {
+    response.status(200).send(usersurveys);
   } else {
     response.sendStatus(404);
   }
@@ -107,12 +122,13 @@ app.post("/surveys", function (request, response) {
   db.get("surveys")
     .push({
       uuid: request.query.uuid,
-      zeitgemaess_zeitlos: request.query.zeitgemaess_zeitlos,
+      aktuell_zeitlos: request.query.aktuell_zeitlos,
       kraftvoll_sanft: request.query.kraftvoll_sanft,
       verspielt_ernst: request.query.verspielt_ernst,
       warm_kalt: request.query.warm_kalt,
-      gewöhnlich_individuell: request.query.gewöhnlich_individuell,
+
       color: request.query.color,
+      hsl: chroma(request.query.color).hsl(),
     })
     .write();
   db.get("users")
@@ -128,7 +144,9 @@ app.post("/surveys", function (request, response) {
 /**
  * get rangliste
  */
-app.get("/ranking", function (request, response) {});
+app.get("/ranking", function (request, response) {
+  response.send(db.get("users").sortBy("points").reverse().take(50).value());
+});
 
 // get all surveys - for testing
 app.get("/surveys", function (request, response) {
@@ -142,11 +160,11 @@ app.get("/colors", function (request, response) {
 
 // clear surveys - for testing
 
-app.get("/clear", function (request, response) {
-  db.get("surveys").remove().write();
-  db.get("users").remove().write();
-  response.send("Database cleared");
-});
+// app.get("/clear", function (request, response) {
+//   db.get("surveys").remove().write();
+//   db.get("users").remove().write();
+//   response.send("Database cleared");
+// });
 
 // FUNCTIONS
 

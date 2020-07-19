@@ -1,10 +1,80 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>simple-survey-server</title>
+    <title>colour-code</title>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="apple-touch-icon"
+      sizes="57x57"
+      href="../static/favicon/apple-icon-57x57.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="60x60"
+      href="../static/favicon/apple-icon-60x60.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="72x72"
+      href="../static/favicon/apple-icon-72x72.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="76x76"
+      href="../static/favicon/apple-icon-76x76.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="114x114"
+      href="../static/favicon/apple-icon-114x114.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="120x120"
+      href="../static/favicon/apple-icon-120x120.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="144x144"
+      href="../static/favicon/apple-icon-144x144.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="152x152"
+      href="../static/favicon/apple-icon-152x152.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="../static/favicon/apple-icon-180x180.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="192x192"
+      href="../static/favicon/android-icon-192x192.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="../static/favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="96x96"
+      href="../static/favicon/favicon-96x96.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="../static/favicon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="../static/favicon/manifest.json" />
     <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
@@ -13,6 +83,7 @@
     />
     <link rel="stylesheet" href="../style.css" />
     <link rel="stylesheet" href="../abstaende.css" />
+    <link rel="stylesheet" href="../font.css" />
     <link rel="stylesheet" href="game.css" />
     <link rel="stylesheet" href="https://use.typekit.net/zvc1tbo.css" />
     <script
@@ -38,8 +109,11 @@
   </head>
   <body>
     <header>
-      <nav class="navbar navbar-expand-lg navbar-light">
-        <a class="navbar-brand" href="../index.html"> Farbenspiel</a>
+      <nav class="box mx-auto navbar navbar-expand-lg navbar-light">
+        <a class="navbar-brand" href="../index.html">
+          <img src="/static/logo3.png" width="110" alt="colourcode"
+        /></a>
+
         <button
           class="navbar-toggler"
           type="button"
@@ -53,14 +127,17 @@
         </button>
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav mr-auto">
+          <ul class="navbar-nav mr-auto mt-md">
             <li class="nav-item active">
-              <a class="nav-link" href="../index.html"
-                >Das Spiel<span class="sr-only">(current)</span></a
+              <a class="nav-link mr-sm" href="../index.html"> Das Spiel</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link mr-sm" href="../end/end.html">
+                Der Generator</a
               >
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="../rangliste/rangliste.html"
+              <a class="nav-link mr-sm" href="../rangliste/rangliste.html"
                 >Rangliste</a
               >
             </li>
@@ -73,202 +150,126 @@
     </header>
 
     <main>
-      <div id="slide3" style="display: block;">
-        <div class="container centered">
-          <div class="start">
-            <h4 class="mb-xl">
-              Wie wirkt diese Farbe auf dich? Ziehe den Kreis an die für dich
-              passende Stelle.
-            </h4>
-
-            <div class="row mb-xl">
-              <div class="col-md-12 colorRect">
-                <div>
-                  <div
-                    id="colorrect"
-                    style="height: 100px; width: 300px;"
-                  ></div>
-                </div>
+      <div class="boxInner mx-auto c-game alignCenter">
+        <div>
+          <h4 class="mb-lg">
+            Wie wirkt diese Farbe auf dich?
+            <!-- Ziehe den Kreis an die für dich passende Stelle. -->
+          </h4>
+          <!-- Aktuelle Farbe  -->
+          <div class="row mb-lg">
+            <div class="col-md-12 colorRect">
+              <div>
+                <div id="colorrect" style="height: 100px; width: 300px;"></div>
               </div>
             </div>
+          </div>
 
-            <!-- Range Slider 1 -->
+          <!-- Range Slider 1 -->
 
-            <div class="row pb-xs">
-              <div class="col-md-2 col-xs-2">
-                <label for="">zeitgemäß</label>
-              </div>
-              <div class="col-md-8 col-xs-8">
-                <div class="slidecontainer pb-md">
-                  <input
-                    type="range"
-                    min="0"
-                    max="100"
-                    value="50"
-                    class="slider"
-                    id="zeitgemaess_zeitlos"
-                  />
-
-                  <!-- <p>Value: <span id="demo"></span></p> -->
-                </div>
-              </div>
-              <div class="col-md-2 col-xs-2">zeitlos</div>
+          <div class="row pb-xs">
+            <div class="col-md-2 col-xs-2">
+              <label for="">aktuell</label>
             </div>
-
-            <!-- Range Slider 2 -->
-
-            <div class="row pb-xs">
-              <div class="col-md-2 col-xs-2">
-                <label for="">kraftvoll</label>
+            <div class="col-md-8 col-xs-8">
+              <div class="slidecontainer pb-md">
+                <input
+                  type="range"
+                  min="0"
+                  max="100"
+                  value="50"
+                  class="slider"
+                  id="aktuell_zeitlos"
+                />
               </div>
-              <div class="col-md-8 col-xs-8">
-                <div class="slidecontainer pb-md">
-                  <input
-                    type="range"
-                    min="0"
-                    max="100"
-                    value="50"
-                    class="slider"
-                    id="kraftvoll_sanft"
-                  />
-                </div>
-              </div>
-              <div class="col-md-2 col-xs-2">sanft</div>
             </div>
+            <label class="col-md-2 col-xs-2">zeitlos</label>
+          </div>
 
-            <!-- Range Slider 3 -->
+          <!-- Range Slider 2 -->
 
-            <div class="row pb-xs">
-              <div class="col-md-2 col-xs-2">
-                <label for="">verspielt</label>
-              </div>
-              <div class="col-md-8 col-xs-8">
-                <div class="slidecontainer pb-md">
-                  <input
-                    type="range"
-                    min="0"
-                    max="100"
-                    value="50"
-                    class="slider"
-                    id="verspielt_ernst"
-                  />
-                </div>
-              </div>
-              <div class="col-md-2 col-xs-2">ernst</div>
+          <div class="row pb-xs">
+            <div class="col-md-2 col-xs-2">
+              <label for="">kraftvoll</label>
             </div>
-
-            <!-- Range Slider 4 -->
-
-            <div class="row pb-xs">
-              <div class="col-md-2 col-xs-2">
-                <label for="">warm</label>
+            <div class="col-md-8 col-xs-8">
+              <div class="slidecontainer pb-md">
+                <input
+                  type="range"
+                  min="0"
+                  max="100"
+                  value="50"
+                  class="slider"
+                  id="kraftvoll_sanft"
+                />
               </div>
-              <div class="col-md-8 col-xs-8">
-                <div class="slidecontainer pb-md">
-                  <input
-                    type="range"
-                    min="0"
-                    max="100"
-                    value="50"
-                    class="slider"
-                    id="warm_kalt"
-                  />
-                </div>
-              </div>
-              <div class="col-md-2 col-xs-2">kalt</div>
             </div>
+            <label class="col-md-2 col-xs-2">sanft</label>
+          </div>
 
-            <!-- Range Slider 5 -->
+          <!-- Range Slider 3 -->
 
-            <div class="row pb-xs">
-              <div class="col-md-2 col-xs-2">
-                <label for="">individuell</label>
-              </div>
-              <div class="col-md-8 col-xs-8">
-                <div class="slidecontainer pb-md">
-                  <input
-                    type="range"
-                    min="0"
-                    max="100"
-                    value="50"
-                    class="slider"
-                    id="gewöhnlich_individuell"
-                  />
-                </div>
-              </div>
-              <div class="col-md-2 col-xs-2">gewöhnlich</div>
+          <div class="row pb-xs">
+            <div class="col-md-2 col-xs-2">
+              <label for="">verspielt</label>
             </div>
-
-            <div class="row">
-              <div class="col-md-12">
-                <form id="survey">
-                  <!-- <button
-                    type="button "
-                    class="btn btn-wide btn-normal"
-                    onclick="gofromtoslide('slide3', 'slide2')"
-                  >
-                    Zurück
-                  </button> -->
-
-                  <button type="button " class="btn primary btn-normal">
-                    Weiter
-                  </button>
-                </form>
+            <div class="col-md-8 col-xs-8">
+              <div class="slidecontainer pb-md">
+                <input
+                  type="range"
+                  min="0"
+                  max="100"
+                  value="50"
+                  class="slider"
+                  id="verspielt_ernst"
+                />
               </div>
+            </div>
+            <label class="col-md-2 col-xs-2">ernst</label>
+          </div>
+
+          <!-- Range Slider 4 -->
+
+          <div class="row pb-xs">
+            <div class="col-md-2 col-xs-2">
+              <label for="">warm</label>
+            </div>
+            <div class="col-md-8 col-xs-8">
+              <div class="slidecontainer pb-md">
+                <input
+                  type="range"
+                  min="0"
+                  max="100"
+                  value="50"
+                  class="slider"
+                  id="warm_kalt"
+                />
+              </div>
+            </div>
+            <label class="col-md-2 col-xs-2">kalt</label>
+          </div>
+          <!-- Button  -->
+          <div class="row">
+            <div class="col-md-12">
+              <form id="survey">
+                <button type="button " class="btn primary">
+                  Weiter
+                </button>
+              </form>
             </div>
           </div>
         </div>
       </div>
-      <div class="level softui">
+      <!-- Level und Punkte Anzeige  -->
+      <div class="level softlevel">
         <h5>
-          <span style="color: rgb(0, 94, 255);" id="username"></span>
+          <span style="color: #a13356;" id="username"></span>
         </h5>
         <h5>Level <span id="activlevel"></span></h5>
-        <h5>Deine Punkte <span id="activpoints"></span></h5>
+        <h5>Punkte <span id="activpoints"></span></h5>
       </div>
-
-      <!-- <div id="slide4" style="display: none;">
-        <div class="container centered">
-          <div class="start">
-            <h4 class="mb-md">
-              Vielen Dank fürs teilnehmen. Schicke jetzt deine Umfrage ab.
-            </h4>
-
-            <div class="row">
-              <div class="col-md-12">
-                <button
-                  type="button "
-                  class="btn btn-primary"
-                  onclick="gofromtoslide('slide4', 'slide3')"
-                >
-                  Zurück
-                </button>
-                <form id="survey">
-                  <button
-                    type="button submit"
-                    class="btn btn-primary"
-                    onclick="location.href='game.html';"
-                  >
-                    Submit
-                  </button>
-                </form>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div> -->
-
-      <!-- <div class="row">
-        <div class="col-md-12">
-          <div class="surveys">
-            <p class="mt-md">Surveys:</p>
-            <ul id="surveys"></ul>
-            <p><a href="/clear">Clear</a></p>
-          </div>
-        </div>
-      </div> -->
     </main>
-
+    <footer style="height: 50px;"></footer>
     <!-- Your web-app is https, so your scripts need to be too -->
     <script
       src="https://code.jquery.com/jquery-2.2.1.min.js"
