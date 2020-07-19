@@ -1,6 +1,12 @@
 /* global ml5 $ */
 
 import data from "./data_aktuell.js";
+// var data = [];
+// $.get("/surveys", function (surveyData) {
+//   data = JSON.parse(surveyData);
+// });
+// console.log(data);
+
 const generatorUUID = localStorage.getItem("generatorUUID");
 console.log(generatorUUID);
 var filteredData = [];
